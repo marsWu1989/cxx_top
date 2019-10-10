@@ -1,0 +1,97 @@
+@import "../../_base.scss";
+
+.swiper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+
+  .swiper-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    bottom: px2vw(53px);
+    left: px2vw(120px);
+
+    height: px2vw(20px);
+  }
+
+  .swiper-pagination-bullet {
+    float: left;
+    width: px2vw(20px);
+    height: px2vw(20px);
+    margin: 0 px2vw(11px);
+
+    background: rgb(255, 255, 255);
+    border-radius: 50% 50%;
+
+    &.swiper-pagination-bullet-active {
+      background: rgb(255, 0, 0);
+    }
+  }
+  .line {
+    position: fixed;
+    right: 0;
+    bottom: px2vw(53px);
+    left: px2vw(300px);
+    z-index: 2;
+
+    width: px2vw(260px);
+    height: 1px;
+
+    background: rgb(216, 216, 216);
+  }
+
+  .lang {
+    position: fixed;
+    right: px2vw(72px);
+    bottom: px2vw(53px);
+    z-index: 2;
+
+    span {
+      float: left;
+      width: px2vw(43px);
+      height: px2vw(43px);
+
+      background: red;
+    }
+
+    .cn {
+      background: url(./image/cn.png) no-repeat center center;
+      background-size: px2vw(22px) px2vw(27px);
+    }
+
+    .cn.act {
+      background: url(./image/cn_act.png) no-repeat center center;
+      background-size: px2vw(43px) px2vw(43px);
+    }
+
+    .en {
+      margin: 0 0 0 px2vw(14px);
+      background: url(./image/en.png) no-repeat center center;
+      background-size: px2vw(31px) px2vw(19px);
+    }
+
+    .en.act {
+      background: url(./image/en.png) no-repeat center center;
+      background-size: px2vw(43px) px2vw(43px);
+    }
+  }
+}
+
+.swiper_life {
+  background: #fff;
+}

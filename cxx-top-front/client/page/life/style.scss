@@ -1,0 +1,98 @@
+@import "../../_base.scss";
+
+.life {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url(./image/bg_a.png) no-repeat center center;
+  background-size: 100% 100%;
+
+  &.a {
+    background: url(./image/bg_a.png) no-repeat center center;
+    background-size: 100% 100%;
+  }
+  &.b {
+    background: url(./image/bg_b.png) no-repeat center center;
+    background-size: 100% 100%;
+  }
+  &.c {
+    background: url(./image/bg_c.png) no-repeat center center;
+    background-size: 100% 100%;
+  }
+  &.d {
+    background: url(./image/bg_d.png) no-repeat center center;
+    background-size: 100% 100%;
+  }
+  &.e {
+    background: url(./image/bg_e.png) no-repeat center center;
+    background-size: 100% 100%;
+  }
+  &.f {
+    background: url(./image/bg_f.png) no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  .tab {
+    position: absolute;
+    right: px2vw(20px);
+    bottom: px2vw(20px);
+    left: px2vw(20px);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: px2vw(110px);
+
+    li {
+      width: px2vw(110px);
+      height: px2vw(110px);
+
+      border-radius: px2vw(8px);
+    }
+
+
+    li:nth-child(1) {
+      background: #fff url(./image/a.png) no-repeat center center;
+      background-size: px2vw(64px) px2vw(84px);
+    }
+    li:nth-child(1).active {
+      box-shadow: 0 0 0 px2vw(4px) rgb(245, 166, 35) inset;
+    }
+    li:nth-child(2) {
+      background: #fff url(./image/b.png) no-repeat center center;
+      background-size: px2vw(55px) px2vw(86px);
+    }
+    li:nth-child(2).active {
+      box-shadow: 0 0 0 px2vw(4px) rgb(232, 0, 0) inset;
+    }
+    li:nth-child(3) {
+      background: #fff url(./image/c.png) no-repeat center center;
+      background-size: px2vw(36px) px2vw(86px);
+    }
+    li:nth-child(3).active {
+      box-shadow: 0 0 0 px2vw(4px) rgb(77, 71, 236) inset;
+    }
+    li:nth-child(4) {
+      background: #fff url(./image/d.png) no-repeat center center;
+      background-size: px2vw(40px) px2vw(88px);
+    }
+    li:nth-child(4).active {
+      box-shadow: 0 0 0 px2vw(4px) rgb(207, 109, 0) inset;
+    }
+    li:nth-child(5) {
+      background: #fff url(./image/e.png) no-repeat center center;
+      background-size: px2vw(63px) px2vw(81px);
+    }
+    li:nth-child(5).active {
+      box-shadow: 0 0 0 px2vw(4px) rgb(79, 79, 79) inset;
+    }
+    li:nth-child(6) {
+      background: #fff url(./image/f.png) no-repeat center center;
+      background-size: px2vw(63px) px2vw(82px);
+    }
+    li:nth-child(6).active {
+      box-shadow: 0 0 0 px2vw(4px) rgb(245, 166, 35) inset;
+    }
+  }
+}

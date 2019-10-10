@@ -1,0 +1,26 @@
+/* *
+ * _base.scss
+ * */
+
+/* *
+ * @brief clear, close float
+ * */
+%clearfix {
+
+  &:before,
+  &:after {
+    display: table;
+    font: 0/0 a;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+$ui-width: 750px;
+
+@function px2vw($px) {
+  @return $px / $ui-width * 100vw;
+}

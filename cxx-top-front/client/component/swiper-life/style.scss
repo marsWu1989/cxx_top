@@ -1,0 +1,23 @@
+@import "../../_base.scss";
+
+.swiper-life {
+  width: 100vw;
+  height: 100vh;
+
+  .img {
+    display: block;
+    width: px2vw(504px);
+    height: px2vw(690px);
+    margin: px2vw(322px) auto 0;
+
+    background: url(./image/life.png) no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  .tit {
+    width: px2vw(504px);
+    margin: px2vw(12px) auto 0;
+    text-align: left;
+    color: rgba(0, 0, 0, .5);
+  }
+}

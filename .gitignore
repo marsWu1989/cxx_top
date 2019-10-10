@@ -1,0 +1,27 @@
+# IDE
+.DS_Store
+.vscode/
+
+# dependencies
+node_modules
+.nyc_output
+package-lock.json
+yarn.lock
+
+# production
+asset
+config/reactFest.json
+config/reactFest.json
+config/echartsFest.json
+config/env.js
+.cache
+
+# misc
+*.log
+*.swp
+npm-debug.log
+log/*
+!log/
+nohup.out
+.scannerwork/
+coverage

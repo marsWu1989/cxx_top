@@ -1,0 +1,211 @@
+@import "../../_base.scss";
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+
+  height: px2vw(132px);
+  overflow: hidden;
+
+  &.active {
+    height: 100vh;
+    background: #fff;
+  }
+
+  .logo {
+    position: absolute;
+    top: px2vw(57px);
+    left: px2vw(60px);
+    z-index: 1;
+
+    width: px2vw(90px);
+    height: px2vw(75px);
+
+    background: url(./image/logo.png) no-repeat center center;
+    background-size: px2vw(90px) px2vw(75px);
+  }
+
+  .slogin {
+    position: absolute;
+    top: px2vw(82px);
+
+    width: 100vw;
+    height: px2vw(27px);
+
+    margin: 0 auto;
+
+    background: url(./image/slogin.png) no-repeat center center;
+    background-size: px2vw(202px) px2vw(20px);
+  }
+
+  .btn {
+    position: absolute;
+    top: px2vw(75px);
+    right: px2vw(60px);
+
+    width: px2vw(45px);
+    height: px2vw(45px);
+
+    span {
+      position: absolute;
+      top: px2vw(7px);
+      right: 0;
+      left: 0;
+
+      width: 100%;
+      height: px2vw(4.6px);
+
+      background: #000;
+    }
+
+    span:nth-child(1) {
+      animation: btnOne .5s;
+      transform: translate(0, 0) rotate(0deg);
+    }
+
+    span:nth-child(2) {
+      top: px2vw(20px);
+      animation: btnTwo .5s;
+    }
+
+    span:nth-child(3) {
+      top: px2vw(32px);
+      animation: btnThr .5s;
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  .btn.active {
+
+    span:nth-child(1) {
+      animation: btnOneAct .5s;
+      transform: translate(0, px2vw(12.5px)) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      width: 0;
+      animation: btnTwoAct .5s;
+    }
+
+    span:nth-child(3) {
+      animation: btnThrAct .5s;
+      transform: translate(0, px2vw(-12.5px)) rotate(-45deg);
+    }
+  }
+
+  .list {
+    margin: px2vw(310px) px2vw(60px) 0;
+
+    li {
+      height: px2vw(130px);
+
+      font-size: px2vw(55px);
+      font-family: 'Bebas';
+      line-height: px2vw(56px);
+    }
+
+    li.active span,
+    li.active em {
+      animation: listAct .5s;
+      transform: translate(0, 0);
+    }
+
+    a {
+      display: block;
+      height: px2vw(56px);
+      overflow: hidden;
+      color: #000;
+    }
+
+    span {
+      float: left;
+      padding: px2vw(6px) 0 0 0;
+      transform: translate(0, px2vw(56px));
+    }
+
+    em {
+      float: left;
+      padding: 0 0 0 px2vw(10px);
+      opacity: .2;
+      font-weight: bold;
+      transform: translate(0, px2vw(56px));
+    }
+  }
+}
+
+@keyframes btnOne {
+
+  from {
+    transform: translate(0, px2vw(12.5px)) rotate(45deg);
+  }
+  to {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes btnOneAct {
+
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(0, px2vw(12.5px)) rotate(45);
+  }
+}
+
+@keyframes btnTwo {
+
+  from {
+    width: 0;
+    transform: translate(px2vw(22.5px), 0);
+  }
+  to {
+    width: 100%;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes btnTwoAct {
+
+  from {
+    width: 100%;
+    transform: translate(0, 0);
+  }
+  to {
+    width: 0;
+    transform: translate(px2vw(22.5px), 0);
+  }
+}
+
+@keyframes btnThr {
+
+  from {
+    transform: translate(0, px2vw(-12.5px)) rotate(-45deg);
+  }
+  to {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes btnThrAct {
+
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(0, px2vw(-12.5px)) rotate(-45deg);
+  }
+}
+
+@keyframes listAct {
+
+  from {
+    transform: translate(0, px2vw(56px));
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
