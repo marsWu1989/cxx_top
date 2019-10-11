@@ -1,0 +1,118 @@
+.life {
+  width: 100%;
+  height: 100%;
+}
+.life ul {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.life li {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+}
+.tabs {
+  position: absolute;
+}
+.tabs ul {
+  padding: 0;
+  margin: 0;
+}
+.tab {
+  display: inline-block;
+  margin: 0 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #585858;
+  cursor: pointer;
+}
+.cur {
+  display: inline-block;
+  margin: 0 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FF0000;
+  cursor: pointer;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(./../../images/sub_life.png) no-repeat center bottom;
+  background-size: 100% auto;
+  z-index: 1;
+}
+.life_1 {
+  width: 1000px;
+  height: 765px;
+  margin: 45px auto 0 auto;
+  background: url(./../../images/life_1.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.life_2 {
+  width: 1000px;
+  height: 1550px;
+  margin: 15px auto 0 auto;
+  background: url(./../../images/life_2.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.life_3 {
+  width: 1000px;
+  height: 620px;
+  margin: 30px auto 0 auto;
+  background: url(./../../images/life_3.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.life_4 {
+  width: 1000px;
+  height: 1142px;
+  margin: 30px auto 0 auto;
+  background: url(./../../images/life_4.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.life_5 {
+  width: 1000px;
+  height: 723px;
+  margin: 30px auto 0 auto;
+  background: url(./../../images/life_5.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.life_6 {
+  width: 1000px;
+  height: 880px;
+  margin: 30px auto 0 auto;
+  background: url(./../../images/life_6.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.life_7 {
+  width: 1000px;
+  margin: 0 auto 20px auto;
+}
+.life_7 p {
+  border-left: 1px #979797 solid;
+  border-right: 1px #979797 solid;
+  margin: 0 0 0 100px;
+  line-height: 1;
+}
+.life_7 b {
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+}
+.life_7 span {
+  display: block;
+  padding: 30px 10px 20px 10px;
+  font-size: 12px;
+  border-bottom: 1px #979797 solid;
+  color: #787878;
+}
+.life_7 p:first-child b {
+  padding-top: 20px;
+}
+.tab_1 {
+  
+}

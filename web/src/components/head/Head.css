@@ -1,0 +1,33 @@
+.Head {
+    position: absolute;
+    text-align: center;
+    width: 1200px;
+    left: 50%;
+    margin: 40px 0 0 -600px;
+    line-height: 38px;
+    z-index: 4;
+}
+.Head span {
+  color: #000;
+  opacity: .2;
+  font-size: 12px;
+}
+.logo {
+  display: block;
+  width: 46px;
+  height: 38px;
+  float: left;
+  background: url(./../../images/logo.png) no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+.menu {
+  display: block;
+  float: right;
+  margin-top: 7.5px;
+  width: 22.5px;
+  height: 15px;
+  background: url(./../../images/menu.png) no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}

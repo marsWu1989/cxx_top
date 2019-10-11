@@ -1,0 +1,26 @@
+ @font-face {
+     font-family: 'commonFont';
+     src: url('./BEBAS.ttf');
+ }
+ html {
+    width: 100%;
+    height: 100%;
+ }
+body {
+    width: 100%;
+    height: 100%;
+  margin: 0;
+  font-family: 'commonFont';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+   position: relative;
+    width: 100%;
+    height: 100%; 
+}
+.App {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
