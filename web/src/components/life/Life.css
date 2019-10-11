@@ -9,41 +9,20 @@
   margin: 0;
 }
 .life li {
+  display: none;
   width: 100%;
   height: 100%;
   list-style-type: none;
 }
-.tabs {
-  position: absolute;
-}
-.tabs ul {
-  padding: 0;
-  margin: 0;
-}
-.tab {
-  display: inline-block;
-  margin: 0 4px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #585858;
-  cursor: pointer;
-}
-.cur {
-  display: inline-block;
-  margin: 0 4px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #FF0000;
-  cursor: pointer;
+.life .content_cur {
+  display: block;
 }
 .banner {
   position: relative;
   width: 100%;
   height: 100%;
   background: url(./../../images/sub_life.png) no-repeat center bottom;
-  background-size: 100% auto;
+  background-size: cover;
   z-index: 1;
 }
 .life_1 {
@@ -106,13 +85,76 @@
 .life_7 span {
   display: block;
   padding: 30px 10px 20px 10px;
-  font-size: 12px;
+  font-size: 24px;
   border-bottom: 1px #979797 solid;
   color: #787878;
 }
 .life_7 p:first-child b {
   padding-top: 20px;
 }
+.sub_tabs {
+  position: absolute;
+  width: 1200px;
+  top: 120px;
+  left: 50%;
+  margin: 40px 0 0 -600px;
+  z-index: 3;
+}
+.sub_tabs ul {
+  padding: 0;
+  margin: 0;
+}
+.sub_tabs li {
+  width: 86px;
+  height: 86px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px #fff solid;
+  background: #fff;
+  list-style-type: none;
+}
 .tab_1 {
-  
+  display: inline-block;
+  width: 86px;
+  height: 86px;
+  background: url(./../../images/tab_1.png) no-repeat center;
+  background-size: 52px 70px;
+}
+.tab_2 {
+  display: inline-block;
+  width: 86px;
+  height: 86px;
+  background: url(./../../images/tab_2.png) no-repeat center;
+  background-size: 46px 72px;
+}
+.tab_3 {
+  display: inline-block;
+  width: 86px;
+  height: 86px;
+  background: url(./../../images/tab_3.png) no-repeat center;
+  background-size: 30px 71px;
+}
+.tab_4 {
+  display: inline-block;
+  width: 86px;
+  height: 86px;
+  background: url(./../../images/tab_4.png) no-repeat center;
+  background-size: 34px 73px;
+}
+.tab_5 {
+  display: inline-block;
+  width: 86px;
+  height: 86px;
+  background: url(./../../images/tab_5.png) no-repeat center;
+  background-size: 53px 67px;
+}
+.tab_6 {
+  display: inline-block;
+  width: 86px;
+  height: 86px;
+  background: url(./../../images/tab_6.png) no-repeat center;
+  background-size: 53px 68px;
+}
+.sub_tabs .tab_cur {
+  border: 2px #f00 solid;
 }
