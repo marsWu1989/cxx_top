@@ -46,7 +46,7 @@ class Life extends Component {
       const content_index = this.state.content_index;
         return (
           <div className="App">
-            <Head />
+            <Head props={this.props} />
             <div className="life">
               <ul>
                 <li className={`${content_index[0]?'content_cur':''}`}>

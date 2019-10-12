@@ -7,12 +7,15 @@
     line-height: 76px;
     z-index: 4;
 }
-.Head span {
+.App-header > span {
+  position: relative;
   color: #000;
   opacity: .2;
   font-size: 20px;
+  z-index: 9;
 }
 .logo {
+  position: relative;
   display: block;
   width: 92px;
   height: 76px;
@@ -20,14 +23,179 @@
   background: url(./../../images/logo.png) no-repeat center;
   -webkit-background-size: 100%;
   background-size: 100%;
+  z-index: 9;
 }
+
 .menu {
+  position: relative;
   display: block;
   float: right;
   margin-top: 7.5px;
   width: 45px;
   height: 30px;
-  background: url(./../../images/menu.png) no-repeat center;
-  -webkit-background-size: 100%;
-  background-size: 100%;
+  cursor: pointer;
+  z-index: 9;
+}
+.menu > span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #000;
+  opacity: 1;
+}
+.menu > span:nth-child(1) {
+  animation: btnOne .5s;
+  transform: translate(0, 0) rotate(0deg);
+}
+
+.menu > span:nth-child(2) {
+  top: 13px;
+  animation: btnTwo .5s;
+}
+
+.menu > span:nth-child(3) {
+  top: 26px;
+  animation: btnThr .5s;
+  transform: translate(0, 0) rotate(0deg);
+}
+
+.active > span:nth-child(1) {
+  animation: btnOneAct .5s;
+  transform: translate(0, 12px) rotate(45deg);
+}
+
+.active > span:nth-child(2) {
+  width: 0;
+  animation: btnTwoAct .5s;
+}
+
+.active > span:nth-child(3) {
+  animation: btnThrAct .5s;
+  transform: translate(0, -14px) rotate(-45deg);
+}
+.item {
+  position: relative;
+  background: #fff;
+  margin: 35px 0;
+  margin-left: 60px;
+}
+.item_active:before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: -60px;
+  top: 50%;
+  margin-top: -6px;
+  width: 43px;
+  height: 6px;
+  background: #000;
+}
+.item:hover :before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: -60px;
+  top: 50%;
+  margin-top: -6px;
+  width: 43px;
+  height: 6px;
+  background: #000;
+}
+.item a{
+  color: #000;
+  text-decoration: none;
+}
+.nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-size: 55px;
+  text-align: left;
+}
+.nav_active {
+  display: block;
+}
+.nav_box {
+  width: 650px;
+  padding: 0;
+  margin: 120px auto 0 auto;
+}
+.nav {
+  line-height: 1;
+  
+}
+.cn {
+  display: inline-block;
+  margin-left: 10px;
+  opacity: .2;
+}
+@keyframes btnOne {
+
+  from {
+    transform: translate(0, 12.5px) rotate(45deg);
+  }
+  to {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes btnOneAct {
+
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(0, 12.5px) rotate(45);
+  }
+}
+
+@keyframes btnTwo {
+
+  from {
+    width: 0;
+    transform: translate(22.5px, 0);
+  }
+  to {
+    width: 100%;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes btnTwoAct {
+
+  from {
+    width: 100%;
+    transform: translate(0, 0);
+  }
+  to {
+    width: 0;
+    transform: translate(22.5px, 0);
+  }
+}
+
+@keyframes btnThr {
+
+  from {
+    transform: translate(0, -14px) rotate(-45deg);
+  }
+  to {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes btnThrAct {
+
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(0, -14px) rotate(-45deg);
+  }
 }

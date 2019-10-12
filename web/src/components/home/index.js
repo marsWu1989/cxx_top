@@ -74,12 +74,13 @@ class Home extends Component {
         this.refs.bg.style.backgroundSize = `${clientWidth}px ${clientHeight}px`;
         this.refs.bg.style.zIndex = 3;
         this.refs.bg.style.opacity = 1;
+        this.refs.bg.style.width = "100%";
       }, 10);
     }
     render() {
         return (
           <div className="App">
-            <Head />
+            <Head props={this.props} />
             <div className="main">
               <ul ref="bannerItem">
                 <li className="img_1" onClick={() => this.handleClick(1)} />
