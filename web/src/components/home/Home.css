@@ -21,14 +21,35 @@
   transition: left 1s;
 }
 .main ul li {
+  width: 900px;
+  height: 420px;
   list-style-type: none;
   display: inline-block;
   cursor: pointer;
+  overflow: hidden;
 }
 .img_1 {
-  width: 900px;
-  height: 420px;
-  background: url(./../../images/life.png) no-repeat center;
+  background: url(./../../images/home_life.png) no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: cover;
+}
+.img_2 span:nth-child(1) {
+  margin-top: 70px;
+  display: block;
+  font-size: 144px;
+}
+.img_2 span:nth-child(2) {
+  display: block;
+  font-size: 100px;
+  opacity: .2;
+}
+.img_3 {
+  background: url(./../../images/dress.png) no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+.img_4 {
+  background: url(./../../images/chest.png) no-repeat center;
   -webkit-background-size: 100%;
   background-size: 100%;
 }
@@ -89,7 +110,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: url(./../../images/life.png) no-repeat center;
+  background: url(./../../images/life.png) no-repeat center bottom;
   background-size: 900px 420px;
   z-index: 1;
   transition: background-size .5s;

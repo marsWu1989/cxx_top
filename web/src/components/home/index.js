@@ -16,13 +16,34 @@ class Home extends Component {
               <li className="spot" onClick={() => this.handleTab(5, true)} key="5" />
             ]
         };
+        this._mousewheel = this.mousewheel.bind(this);
     }
     componentDidMount() {
+        window.addEventListener('mousewheel', this._mousewheel);
         this.setIntervalTab();
         // this.refs.line.style.width = '777px';
         setTimeout(() => {
             this.refs.line.style.width = '777px';
         }, 0);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('mousewheel', this._mousewheel);
+    }
+    mousewheel(event) {
+        event = event || window.event;
+        let num = this.state.index;
+        if (event.wheelDelta < 0) { //向上滚动
+            if (num === 1) {
+                num = 6;
+            }
+            this.handleTab(num - 1, true, 'up');
+        }
+        if (event.wheelDelta > 0) { //向下滚动
+            if (num === 5) {
+                num = 0;
+            }
+            this.handleTab(num + 1, true, 'down');
+        }
     }
     // 绑定定时器，10秒播放一次
     setIntervalTab() {
@@ -34,8 +55,8 @@ class Home extends Component {
         });
     }
     // 绑定切换，支持自动播放及点击切换 clear：ture为点击后
-    handleTab(n, clear) {
-        console.log(n);
+    handleTab(n, clear, wheel) {
+        console.log('nnnn', n, wheel)
         let num = n;
         const temp = [];
         // 更新按钮，i为按钮个数
@@ -50,10 +71,14 @@ class Home extends Component {
             this.refs.bannerItem.style.left = `${-(num - 1) * 900}px`;
         }
         // 5为图片个数，自动循环播放，1 2 3 4 5
-        if (num === 5) {
-            num = 1;
-        } else {
-            num++;
+        
+        if (!wheel) {
+            // return true;
+            if (num === 5) {
+                num = 1;
+            } else {
+                num++;   
+            }
         }
         this.setState({
             spots: temp,
@@ -71,7 +96,7 @@ class Home extends Component {
       // this.refs.bg.style.width = clientWidth;
       // this.refs.bg.style.height = clientHeight;
       setTimeout(() => {
-        this.refs.bg.style.backgroundSize = `${clientWidth}px ${clientHeight}px`;
+        this.refs.bg.style.backgroundSize = `cover`;
         this.refs.bg.style.zIndex = 3;
         this.refs.bg.style.opacity = 1;
         this.refs.bg.style.width = "100%";
@@ -84,9 +109,9 @@ class Home extends Component {
             <div className="main">
               <ul ref="bannerItem">
                 <li className="img_1" onClick={() => this.handleClick(1)} />
-                <li className="img_1" onClick={() => this.handleClick(1)} />
-                <li className="img_1" onClick={() => this.handleClick(1)} />
-                <li className="img_1" onClick={() => this.handleClick(1)} />
+                <li className="img_2"><span>Brand Story</span><span>品牌故事</span></li>
+                <li className="img_3" onClick={() => this.handleClick(1)} />
+                <li className="img_4" onClick={() => this.handleClick(1)} />
                 <li className="img_1" onClick={() => this.handleClick(1)} />
               </ul>
             </div>

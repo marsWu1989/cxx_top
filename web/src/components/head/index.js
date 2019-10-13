@@ -38,32 +38,32 @@ class Head extends Component {
         {
           en: 'BRAND STORY',
           cn: '品牌故事',
-          routr: '/brand'
+          route: '/life'
         },
         {
           en: 'TOPPING LIQUOR',
           cn: '巢品白酒',
-          routr: '/liquor'
+          route: '/liquor'
         },
         {
           en: 'CLOTHING',
           cn: '服装和饰品',
-          routr: '/clothing'
+          route: '/dress'
         },
         {
           en: 'LUGGAGE',
           cn: '箱包',
-          routr: '/luggage'
+          route: '/chest'
         },
         {
           en: 'CUSTOMMADE',
           cn: '订制',
-          routr: '/custommade'
+          route: '/custommade'
         },
         {
           en: 'HOT TO BUY',
           cn: '如何购买',
-          routr: '/buy'
+          route: '/buy'
         },
       ]
       let Mname = 'menu';
@@ -72,7 +72,6 @@ class Head extends Component {
         Mname = 'menu active';
         Nname = 'nav nav_active'
       }
-      console.log(this.props.props.match.path)
       const path = this.props.props.match.path;
       if (path == '/life') {
         navState[0] = true;
@@ -95,7 +94,7 @@ class Head extends Component {
                     if (navState[index]) {
                       name = 'item item_active'
                     }
-                    return <div className={name}><Link to={item.route}><span>{item.en}</span><span className="cn">{item.cn}</span></Link></div>
+                    return <div className={name} key={index}><Link to={item.route}><span>{item.en}</span><span className="cn">{item.cn}</span></Link></div>
                   })
                 }
 

@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 
 import Head from './../head';
 import './Life.css';
-
 class Life extends Component {
     constructor(props) {
         super(props);
         this.state = {
             tabs: [
-              <li className="tab_cur" onClick={() => this.handleTab(1)} key="1"><i className="tab_1" /></li>,
+              <li onClick={() => this.handleTab(1)} key="1"><i className="tab_1 tab_cur" /></li>,
               <li onClick={() => this.handleTab(2)} key="2"><i className="tab_2" /></li>,
               <li onClick={() => this.handleTab(3)} key="3"><i className="tab_3" /></li>,
               <li onClick={() => this.handleTab(4)} key="4"><i className="tab_4" /></li>,
@@ -27,7 +26,7 @@ class Life extends Component {
         // 更新按钮，i为按钮个数
         for (let i = 1; i <= 6; i++) {
             if (i === n) {
-                temp.push(<li className="tab_cur"  onClick={() => this.handleTab(i)} key={i}><i className={`tab_${i}`} /></li>);
+                temp.push(<li onClick={() => this.handleTab(i)} key={i}><i className={`tab_${i} tab_cur`} /></li>);
                 content_index[i - 1] = true;
             } else {
                 temp.push(<li onClick={() => this.handleTab(i)} key={i}><i className={`tab_${i}`} /></li>);
@@ -45,7 +44,7 @@ class Life extends Component {
     render() {
       const content_index = this.state.content_index;
         return (
-          <div className="App">
+          <div className="App" ref="app">
             <Head props={this.props} />
             <div className="life">
               <ul>
@@ -72,7 +71,7 @@ class Life extends Component {
               </ul>
             </div>
             <div className="sub_tabs">
-              <ul>
+              <ul className='tab_box'>
                 {this.state.tabs}
               </ul>
             </div>
