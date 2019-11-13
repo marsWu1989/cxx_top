@@ -33,7 +33,10 @@ class Head extends Component {
         }
     }
     render() {
-      const navState = [false, false, false, false, false, false]
+      const navState = [false, false, false, false, false, false];
+      const sub_cur = this.props.sub_cur;
+      let logo = <i className="logo" />;
+      
       const list = [
         {
           en: 'BRAND STORY',
@@ -63,24 +66,37 @@ class Head extends Component {
         {
           en: 'HOT TO BUY',
           cn: '如何购买',
-          route: '/buy'
+          route: '/store'
         },
       ]
       let Mname = 'menu';
       let Nname = 'nav';
+      const path = this.props.props.match.path;
+      if (sub_cur == 3 || sub_cur == 4 || sub_cur == 5 || path == '/dress') {
+        logo = <i className="logo2" />;
+        Mname = 'menu2'
+      }
       if (this.state.active) {
-        Mname = 'menu active';
+        Mname = `menu active`;
         Nname = 'nav nav_active'
       }
-      const path = this.props.props.match.path;
-      if (path == '/life') {
-        navState[0] = true;
-      }
+      let text = "";
+        if (path == '/') {
+          navState[0] = true;
+          text = <span ref="text">IT’S TOPPING 喜欢而已</span>;
+        } else {
+          text = "";
+        }
+      // if (this.refs.text) {
+      //   if (this.props.cur == 1) {
+      //   } else {
+      //   }
+      // }
       return (
         <div className="Head">
           <header className="App-header">
-            <Link to='/'><i className="logo" /></Link>
-            <span>IT’S TOPPING 喜欢而已</span>
+            <Link to='/'>{logo}</Link>
+            {text}
             <div className={Mname} onClick={() => this.handleClick()}>
                 <span className="one" />
                 <span className="two" />

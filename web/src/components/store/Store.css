@@ -1,0 +1,66 @@
+.store_content {
+  width: 900px;
+  margin: 0 auto 0 auto;
+  padding: 130px 0 0 0;
+  line-height: 1;
+}
+.store_title {
+  font-size: 100px;
+}
+.store_desc {
+  font-size: 70px;
+  opacity: .5;
+  margin-top: 20px;
+}
+.buyList ul {
+  padding: 0;
+  margin: 0;
+}
+.buyList i {
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+.buyList p {
+  /*width: 450px;*/
+}
+.buyList li {
+  list-style: none;
+  margin: 50px 0 0 0;
+  padding: 0;
+}
+.buyList span {
+  display: block;
+  font-size: 40px;
+  opacity: .8;
+  margin-bottom: 10px;
+}
+.buyList a {
+  line-height: 1.5;
+  font-size: 24px;
+  color: #3DCEFF;
+  text-decoration: none;
+  word-break:break-all;
+}
+.buyList ul li:last-child span {
+  line-height: 100px;
+}
+.tm {
+  width: 97px;
+  height: 100px;
+  background: url(./../../images/tm.png) no-repeat center left;
+  background-size: 100%;
+}
+.jd {
+  width: 100px;
+  height: 100px;
+  background: url(./../../images/jd.png) no-repeat center left;
+  background-size: 100%;
+}
+.ch {
+  width: 100px;
+  height: 100px;
+  background: url(./../../images/ch.png) no-repeat center left;
+  background-size: 100%;
+}
+

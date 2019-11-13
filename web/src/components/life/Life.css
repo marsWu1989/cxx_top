@@ -1,6 +1,8 @@
 .life {
+  position: relative;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 .life ul {
   width: 100%;
@@ -21,13 +23,45 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(./../../images/sub_life.png) no-repeat center bottom;
+  background: url(./../../images/sub_life.png) no-repeat center;
+  background-size: cover;
+  z-index: 1;
+}
+.banner_fuel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(./../../images/sub_fuel.png) no-repeat center;
+  background-size: cover;
+  z-index: 1;
+}
+.banner_intoxic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(./../../images/intoxic.png) no-repeat center;
+  background-size: cover;
+  z-index: 1;
+}
+.banner_wrold {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(./../../images/wrold.png) no-repeat center;
+  background-size: cover;
+  z-index: 1;
+}
+.banner_limit {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(./../../images/limit.png) no-repeat center;
   background-size: cover;
   z-index: 1;
 }
 .life_1 {
   width: 1000px;
-  height: 765px;
+  height: 784px;
   margin: 45px auto 0 auto;
   background: url(./../../images/life_1.png) no-repeat center right;
   background-size: auto 100%;
@@ -85,15 +119,314 @@
 .life_7 span {
   display: block;
   padding: 30px 10px 20px 10px;
-  font-size: 24px;
+  font-size: 12px;
   border-bottom: 1px #979797 solid;
   color: #787878;
 }
 .life_7 p:first-child b {
   padding-top: 20px;
 }
+
+.fuel_1 {
+  width: 1000px;
+  height: 5423px;
+  margin: 45px auto 0 auto;
+  background: url(./../../images/fuel_1.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.fuel_2 {
+  width: 1000px;
+  margin: 0 auto 0px auto;
+}
+.fuel_2 p {
+  border-left: 1px #dcdcdc solid;
+  border-right: 1px #dcdcdc solid;
+  margin: 0 36px 0 136px;
+  line-height: 1;
+  background: #fbfbfb;
+}
+.fuel_2 b {
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+}
+.fuel_2 span {
+  display: block;
+  padding: 20px 10px 20px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-bottom: 1px #dcdcdc solid;
+  color: #787878;
+}
+.fuel_2 p:first-child b {
+  padding-top: 20px;
+}
+
+
+.intoxic_1 {
+  width: 1000px;
+  height: 1345px;
+  margin: 45px auto 0 auto;
+  background: url(./../../images/intoxic_1.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.intoxic_2 {
+  width: 1000px;
+  height: 1028px;
+  margin: 0 auto 0 auto;
+  background: url(./../../images/intoxic_2.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.intoxic_3 {
+  width: 1000px;
+  height: 1481px;
+  margin: 0px auto 0 auto;
+  background: url(./../../images/intoxic_3.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.intoxic_4 {
+  width: 1000px;
+  height: 1553px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/intoxic_4.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.intoxic_5 {
+  width: 1000px;
+  height: 959px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/intoxic_5.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.intoxic_6 {
+  width: 1000px;
+  margin: 0 auto 0px auto;
+}
+.intoxic_6 p {
+  border-left: 1px #dcdcdc solid;
+  border-right: 1px #dcdcdc solid;
+  margin: 0 auto 0 100px;
+  line-height: 1;
+  background: #fbfbfb;
+}
+.intoxic_6 b {
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+}
+.intoxic_6 span {
+  display: block;
+  padding: 20px 10px 20px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-bottom: 1px #dcdcdc solid;
+  color: #787878;
+}
+.intoxic_6 p:first-child b {
+  padding-top: 20px;
+}
+
+
+.wrold_1 {
+  width: 1000px;
+  height: 1092px;
+  margin: 45px auto 0 auto;
+  background: url(./../../images/wrold_1.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.wrold_2 {
+  width: 1000px;
+  height: 705px;
+  margin: 0 auto 0 auto;
+  background: url(./../../images/wrold_2.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.wrold_3 {
+  width: 1000px;
+  height: 1120px;
+  margin: 0px auto 0 auto;
+  background: url(./../../images/wrold_3.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.wrold_4 {
+  width: 1000px;
+  height: 1053px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/wrold_4.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.wrold_5 {
+  width: 1000px;
+  height: 1597px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/wrold_5.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.wrold_6 {
+  width: 1000px;
+  height: 828px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/wrold_6.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.wrold_7 {
+  width: 1000px;
+  margin: 0 auto 0px auto;
+  color: #fff;
+}
+.wrold_7 p {
+  border-left: 1px #dcdcdc solid;
+  border-right: 1px #dcdcdc solid;
+  margin: 0 auto 0 100px;
+  line-height: 1;
+  background: #000;
+}
+.wrold_7 b {
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  margin-left: 10px;
+}
+.wrold_7 span {
+  display: block;
+  padding: 20px 10px 20px 10px;
+  margin-left: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-bottom: 1px #dcdcdc solid;
+  color: #787878;
+  opacity: .7;
+}
+.wrold_7 p:first-child b {
+  padding-top: 20px;
+}
+
+
+.limit_1 {
+  width: 1000px;
+  height: 513px;
+  margin: 45px auto 0 auto;
+  background: url(./../../images/limit_1.png) no-repeat center right;
+  background-size: auto 101%;
+}
+.limit_2 {
+  width: 1000px;
+  height: 518px;
+  margin: 0 auto 0 auto;
+  background: url(./../../images/limit_2.png) no-repeat center right;
+  background-size: auto 101%;
+}
+.limit_3 {
+  width: 1000px;
+  height: 517px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/limit_3.png) no-repeat center right;
+  background-size: auto 101%;
+}
+.limit_4 {
+  width: 1000px;
+  height: 428px;
+  margin: 0 auto 0 auto;
+  background: url(./../../images/limit_4.png) no-repeat center right;
+  background-size: auto 101%;
+}
+.limit_5 {
+  width: 1000px;
+  height: 503px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/limit_5.png) no-repeat center right;
+  background-size: auto 101%;
+}
+.limit_6 {
+  width: 1000px;
+  height: 526px;
+  margin: 0 auto 0 auto;
+  background: url(./../../images/limit_6.png) no-repeat center right;
+  background-size: auto 101%;
+}
+.limit_7 {
+  width: 1000px;
+  height: 534px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/limit_7.png) no-repeat center right;
+  background-size: auto 102%;
+}
+.limit_8 {
+  width: 1000px;
+  height: 401px;
+  margin: 0 auto 0 auto;
+  background: url(./../../images/limit_8.png) no-repeat center right;
+  background-size: auto 102%;
+}
+.limit_9 {
+  width: 1000px;
+  height: 518px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/limit_9.png) no-repeat center right;
+  background-size: auto 523px;
+}
+.limit_10 {
+  width: 1000px;
+  height: 475px;
+  margin: 0 auto 0 auto;
+  background: url(./../../images/limit_10.png) no-repeat center right;
+  background-size: auto 480px;
+}
+.limit_11 {
+  width: 1000px;
+  height: 515px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/limit_11.png) no-repeat center right;
+  background-size: auto 101%;
+}
+.limit_12 {
+  width: 1000px;
+  height: 466px;
+  margin: 0 auto 0 auto;
+  background: url(./../../images/limit_12.png) no-repeat center right;
+  background-size: auto 101%;
+}
+.limit_13 {
+  width: 1000px;
+  height: 752px;
+  margin: 20px auto 0 auto;
+  background: url(./../../images/limit_13.png) no-repeat center right;
+  background-size: 800px 100%;
+}
+.limit_14 {
+  width: 1000px;
+  margin: 20px auto 0px auto;
+}
+.limit_14 p {
+  border-left: 1px #dcdcdc solid;
+  border-right: 1px #dcdcdc solid;
+  margin: 0 auto 0 200px;
+  line-height: 1;
+  background: #dcdcdc;
+}
+.limit_14 b {
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  margin-left: 10px;
+}
+.limit_14 span {
+  display: block;
+  padding: 20px 10px 20px 10px;
+  margin-left: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-bottom: 1px #dcdcdc solid;
+  color: #787878;
+  opacity: .7;
+}
+.limit_14 p:first-child b {
+  padding-top: 20px;
+}
+
+
 .sub_tabs {
-  position: absolute;
+  position: fixed;
   width: 1200px;
   top: 120px;
   left: 50%;
@@ -164,4 +497,71 @@
 }
 .tab_box li:nth-child(1) .tab_cur {
   border: 2px #F5A623 solid;
+}
+.bannerText {
+  width: 100%;
+  position: absolute;
+  left: 100%;
+  bottom: 50px;
+  transition: left 1s;
+  z-index: 2;
+}
+.lifeText1 {
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: url(./../../images/lifeText1.png) no-repeat center left;
+  background-size: 433px 45px;
+}
+.lifeText2 {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  height: 66px;
+  background: url(./../../images/lifeText2.png) no-repeat center left;
+  background-size: 655px 66px;
+}
+.fuleText1 {
+  display: block;
+  width: 100%;
+  height: 73px;
+  background: url(./../../images/fuleText1.png) no-repeat center left;
+  background-size: 149px 73px;
+}
+.fuleText2 {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  height: 69px;
+  background: url(./../../images/fuleText2.png) no-repeat center left;
+  background-size: 515px 69px;
+}
+.intoxicText1 {
+  display: block;
+  width: 100%;
+  height: 70px;
+  background: url(./../../images/intoxicText1.png) no-repeat center left;
+  background-size: 148px 70px;
+}
+.intoxicText2 {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  height: 54px;
+  background: url(./../../images/intoxicText2.png) no-repeat center left;
+  background-size: 607px 54px;
+}
+.wroldText {
+  display: block;
+  width: 100%;
+  height: 122px;
+  background: url(./../../images/wroldText.png) no-repeat center left;
+  background-size: 752px 122px;
+}
+.limitText {
+  display: block;
+  width: 100%;
+  height: 171px;
+  background: url(./../../images/limitText.png) no-repeat center left;
+  background-size: 868px 171px;
 }

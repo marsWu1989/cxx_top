@@ -1,5 +1,5 @@
 .Head {
-    position: absolute;
+    position: fixed;
     text-align: center;
     width: 1200px;
     left: 50%;
@@ -25,8 +25,28 @@
   background-size: 100%;
   z-index: 9;
 }
-
+.logo2 {
+  position: relative;
+  display: block;
+  width: 92px;
+  height: 76px;
+  float: left;
+  background: url(./../../images/logo2.png) no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  z-index: 9;
+}
 .menu {
+  position: relative;
+  display: block;
+  float: right;
+  margin-top: 7.5px;
+  width: 45px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 9;
+}
+.menu2 {
   position: relative;
   display: block;
   float: right;
@@ -44,6 +64,14 @@
   background: #000;
   opacity: 1;
 }
+.menu2 > span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  opacity: 1;
+}
 .menu > span:nth-child(1) {
   animation: btnOne .5s;
   transform: translate(0, 0) rotate(0deg);
@@ -55,6 +83,21 @@
 }
 
 .menu > span:nth-child(3) {
+  top: 26px;
+  animation: btnThr .5s;
+  transform: translate(0, 0) rotate(0deg);
+}
+.menu2 > span:nth-child(1) {
+  animation: btnOne .5s;
+  transform: translate(0, 0) rotate(0deg);
+}
+
+.menu2 > span:nth-child(2) {
+  top: 13px;
+  animation: btnTwo .5s;
+}
+
+.menu2 > span:nth-child(3) {
   top: 26px;
   animation: btnThr .5s;
   transform: translate(0, 0) rotate(0deg);
