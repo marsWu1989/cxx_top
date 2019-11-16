@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import cookie from "react-cookies";
 import Head from './../head';
 import './Home.css';
 
@@ -115,6 +116,9 @@ class Home extends Component {
       }, 0);
       clearInterval(this.state.tab);
     }
+    handleLang(lang) {
+        cookie.save('lang', lang)
+    }
     render() {
         let toLink = "/life";
         if (this.state.cur == 3) {
@@ -143,6 +147,10 @@ class Home extends Component {
                 <ul>
                   {this.state.spots}
                 </ul>
+              </div>
+              <div className="lang">
+                <div className="cn langCur" onClick={() => this.handleLang('zh-CN')}><a href="/">中</a></div>
+                <div className="en" onClick={() => this.handleLang('en-US')}><a href="/">EN</a></div>
               </div>
               <div className="line" ref="line" />
             </div>

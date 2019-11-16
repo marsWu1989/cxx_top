@@ -3,6 +3,7 @@
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  font-family: 'PingFang SC';
 }
 .life ul {
   width: 100%;
@@ -105,26 +106,25 @@
   width: 1000px;
   margin: 0 auto 20px auto;
 }
-.life_7 p {
+.life_text_4 {
   border-left: 1px #979797 solid;
   border-right: 1px #979797 solid;
+  padding: 20px 0 0 20px;
   margin: 0 0 0 100px;
-  line-height: 1;
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: bold;
+  font-family: 'PingFang SC';
 }
-.life_7 b {
-  display: block;
-  font-size: 18px;
-  padding: 10px;
-}
-.life_7 span {
-  display: block;
-  padding: 30px 10px 20px 10px;
-  font-size: 12px;
+.life_text_5 {
+  margin: 0 0 0 100px;
+  padding: 30px 10px 20px 20px;
+  font-size: 24px;
+  border-left: 1px #979797 solid;
+  border-right: 1px #979797 solid;
   border-bottom: 1px #979797 solid;
   color: #787878;
-}
-.life_7 p:first-child b {
-  padding-top: 20px;
+  font-family: 'PingFang SC';
 }
 
 .fuel_1 {
@@ -138,41 +138,80 @@
   width: 1000px;
   margin: 0 auto 0px auto;
 }
-.fuel_2 p {
-  border-left: 1px #dcdcdc solid;
-  border-right: 1px #dcdcdc solid;
-  margin: 0 36px 0 136px;
-  line-height: 1;
-  background: #fbfbfb;
+.fuel_text_1 {
+  position: absolute;
+  width: 515px;
+  height: 132px;
+  font-size: 30px;
+  color: #fff;
+  margin: 1020px 0 0 240px;
+  font-family: 'PingFang SC';
 }
-.fuel_2 b {
-  display: block;
-  font-size: 18px;
-  padding: 10px;
+.fuel_text_1_en {
+  font-size: 24px;
+  line-height: 1.6;
 }
-.fuel_2 span {
-  display: block;
-  padding: 20px 10px 20px 10px;
-  font-size: 12px;
+.fuel_text_2 {
+  position: absolute;
+  width: 515px;
+  height: 132px;
+  font-size: 30px;
+  color: #fff;
+  margin: 2085px 0 0 330px;
+  font-family: 'PingFang SC';
+}
+.fuel_text_2_en {
+  margin-top: 2070px;
+  font-size: 24px;
   line-height: 1.5;
-  border-bottom: 1px #dcdcdc solid;
-  color: #787878;
 }
-.fuel_2 p:first-child b {
-  padding-top: 20px;
+.fuel_text_3 {
+  position: absolute;
+  width: 515px;
+  height: 132px;
+  font-size: 30px;
+  color: #fff;
+  margin: 3860px 0 0 300px;
+  text-align: center;
+  font-family: 'PingFang SC';
+}
+.fuel_text_3_en {
+  margin-top: 3845px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.fuel_text_4 {
+  border-left: 1px #979797 solid;
+  border-right: 1px #979797 solid;
+  padding: 20px 0 0 20px;
+  margin: 0 0 0 136px;
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: bold;
+  font-family: 'PingFang SC';
+}
+.fuel_text_5 {
+  margin: 0 0 0 136px;
+  padding: 30px 10px 20px 20px;
+  font-size: 24px;
+  border-left: 1px #979797 solid;
+  border-right: 1px #979797 solid;
+  border-bottom: 1px #979797 solid;
+  color: #787878;
+  font-family: 'PingFang SC';
 }
 
 
 .intoxic_1 {
   width: 1000px;
-  height: 1345px;
+  height: 1163px;
   margin: 45px auto 0 auto;
   background: url(./../../images/intoxic_1.png) no-repeat center right;
   background-size: auto 100%;
 }
 .intoxic_2 {
   width: 1000px;
-  height: 1028px;
+  height: 840px;
   margin: 0 auto 0 auto;
   background: url(./../../images/intoxic_2.png) no-repeat center right;
   background-size: auto 100%;
@@ -202,34 +241,74 @@
   width: 1000px;
   margin: 0 auto 0px auto;
 }
-.intoxic_6 p {
-  border-left: 1px #dcdcdc solid;
-  border-right: 1px #dcdcdc solid;
-  margin: 0 auto 0 100px;
-  line-height: 1;
-  background: #fbfbfb;
+.intoxic_text_1 {
+  width: 1000px;
+  margin: 50px auto;
+  padding-left: 70px;
+  font-size: 40px;
+  text-align: center;
 }
-.intoxic_6 b {
-  display: block;
-  font-size: 18px;
-  padding: 10px;
+.intoxic_text_1_en {
+  font-size: 24px;
 }
-.intoxic_6 span {
-  display: block;
-  padding: 20px 10px 20px 10px;
-  font-size: 12px;
+.intoxic_text_2 {
+  width: 1000px;
+  margin: 50px auto;
+  padding-left: 70px;
+  font-size: 40px;
+  text-align: center;
+}
+.intoxic_text_2_en {
+  font-size: 24px;
+}
+.intoxic_text_3 {
+  position: absolute;
+  width: 394px;
+  text-align: center;
+  background: #fff;
+  font-size: 30px;
+  margin: 590px 0 0 350px;
+  padding: 15px 0;
+}
+.intoxic_text_3_en {
+  font-size: 24px;
+  background: none;
+}
+.intoxic_text_4 {
+  position: absolute;
+  font-size: 48px;
+  margin: 90px 0 0 150px;
+  color: #fff;
+}
+.intoxic_text_5 {
+  position: absolute;
+  width: 800px;
+  font-size: 24px;
+  margin: 270px 0 0 150px;
+  color: #fff;
+}
+.intoxic_text_6 {
+  padding: 20px 0 0 20px;
+  margin: 0 0 0 100px;
+  font-size: 36px;
   line-height: 1.5;
-  border-bottom: 1px #dcdcdc solid;
-  color: #787878;
+  font-weight: bold;
+  background: #EFEFEF;
+  font-family: 'PingFang SC';
 }
-.intoxic_6 p:first-child b {
-  padding-top: 20px;
+.intoxic_text_7 {
+  margin: 0 0 0 100px;
+  padding: 30px 10px 20px 20px;
+  font-size: 24px;
+  color: #787878;
+  background: #EFEFEF;
+  font-family: 'PingFang SC';
 }
 
 
 .wrold_1 {
   width: 1000px;
-  height: 1092px;
+  height: 959px;
   margin: 45px auto 0 auto;
   background: url(./../../images/wrold_1.png) no-repeat center right;
   background-size: auto 100%;
@@ -238,7 +317,7 @@
   width: 1000px;
   height: 705px;
   margin: 0 auto 0 auto;
-  background: url(./../../images/wrold_2.png) no-repeat center right;
+  background: url(./../../images/wrold_2.png) no-repeat 135px center;
   background-size: auto 100%;
 }
 .wrold_3 {
@@ -274,31 +353,46 @@
   margin: 0 auto 0px auto;
   color: #fff;
 }
-.wrold_7 p {
-  border-left: 1px #dcdcdc solid;
-  border-right: 1px #dcdcdc solid;
-  margin: 0 auto 0 100px;
-  line-height: 1;
-  background: #000;
+.world_text_1 {
+  width: 1000px;
+  margin: 50px auto;
+  padding-left: 70px;
+  font-size: 40px;
+  text-align: center;
 }
-.wrold_7 b {
-  display: block;
-  font-size: 18px;
-  padding: 10px;
-  margin-left: 10px;
+.world_text_1_en {
+  font-size: 26px;
 }
-.wrold_7 span {
-  display: block;
-  padding: 20px 10px 20px 10px;
-  margin-left: 10px;
-  font-size: 12px;
+.world_text_2 {
+  position: absolute;
+  width: 800px;
+  font-size: 40px;
+  margin: 1220px 0 0 150px;
+  color: #fff;
+  text-align: center;
+}
+.world_text_2_en {
+  font-size: 48px;
+  text-align: left;
+  margin-top: 1200px;
+  margin-left: 200px;
+}
+.world_text_3 {
+  padding: 20px 0 0 20px;
+  margin: 0 0 0 100px;
+  font-size: 36px;
   line-height: 1.5;
-  border-bottom: 1px #dcdcdc solid;
-  color: #787878;
-  opacity: .7;
+  font-weight: bold;
+  background: #000;
+  font-family: 'PingFang SC';
 }
-.wrold_7 p:first-child b {
-  padding-top: 20px;
+.world_text_4 {
+  margin: 0 0 0 100px;
+  padding: 30px 10px 20px 20px;
+  font-size: 24px;
+  color: #787878;
+  background: #000;
+  font-family: 'PingFang SC';
 }
 
 
@@ -397,31 +491,22 @@
   width: 1000px;
   margin: 20px auto 0px auto;
 }
-.limit_14 p {
-  border-left: 1px #dcdcdc solid;
-  border-right: 1px #dcdcdc solid;
-  margin: 0 auto 0 200px;
-  line-height: 1;
-  background: #dcdcdc;
-}
-.limit_14 b {
-  display: block;
-  font-size: 18px;
-  padding: 10px;
-  margin-left: 10px;
-}
-.limit_14 span {
-  display: block;
-  padding: 20px 10px 20px 10px;
-  margin-left: 10px;
-  font-size: 12px;
+.limit_text_1 {
+  padding: 20px 0 0 20px;
+  margin: 0 0 0 200px;
+  font-size: 36px;
   line-height: 1.5;
-  border-bottom: 1px #dcdcdc solid;
-  color: #787878;
-  opacity: .7;
+  font-weight: bold;
+  background: #E8E8E8;
+  font-family: 'PingFang SC';
 }
-.limit_14 p:first-child b {
-  padding-top: 20px;
+.limit_text_2 {
+  margin: 0 0 0 200px;
+  padding: 30px 10px 20px 20px;
+  font-size: 24px;
+  color: #787878;
+  background: #E8E8E8;
+  font-family: 'PingFang SC';
 }
 
 
@@ -434,6 +519,7 @@
   z-index: 3;
 }
 .sub_tabs ul {
+  position: absolute;
   padding: 0;
   margin: 0;
 }
@@ -564,4 +650,33 @@
   height: 171px;
   background: url(./../../images/limitText.png) no-repeat center left;
   background-size: 868px 171px;
+}
+.life_text_1 {
+  position: absolute;
+  width: 486px;
+  height: 324px;
+  font-size: 70px;
+  color: #fff;
+  margin: 860px 0 0 100px;
+  text-align: center;
+}
+.life_text_1_en {
+  font-size: 42px;
+  text-align: left;
+  line-height: 1.6;
+  margin-left: 150px;
+}
+.life_text_2 {
+  position: absolute;
+  width: 416px;
+  height: 363px;
+  font-size: 35px;
+  color: #fff;
+  margin: 2060px 0 0 630px;
+}
+.life_text_3 {
+  position: absolute;
+  font-size: 36px;
+  color: #fff;
+  margin: 50px 0 0 160px;
 }

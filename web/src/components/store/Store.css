@@ -14,7 +14,7 @@
 }
 .buyList ul {
   padding: 0;
-  margin: 0;
+  margin: 0 0 50px 0;
 }
 .buyList i {
   display: block;
@@ -23,6 +23,7 @@
 }
 .buyList p {
   /*width: 450px;*/
+  font-family: 'PingFang SC';
 }
 .buyList li {
   list-style: none;

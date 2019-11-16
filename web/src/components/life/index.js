@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { FormattedMessage } from 'react-intl';
+import cookie from "react-cookies";
 import Head from './../head';
 import './Life.css';
 class Life extends Component {
@@ -64,6 +65,27 @@ class Life extends Component {
     }
     render() {
       const content_index = this.state.content_index;
+      const lang = cookie.load('lang');
+      let life_text_1 = 'life_text_1',
+      fuel_text_1 = 'fuel_text_1',
+      fuel_text_2 = 'fuel_text_2',
+      fuel_text_3 = 'fuel_text_3',
+      intoxic_text_1 = 'intoxic_text_1',
+      intoxic_text_2 = 'intoxic_text_2',
+      intoxic_text_3 = 'intoxic_text_3',
+      world_text_1 = 'world_text_1',
+      world_text_2 = 'world_text_2';
+      if (lang == 'en-US') {
+        life_text_1 = 'life_text_1 life_text_1_en';
+        fuel_text_1 = 'fuel_text_1 fuel_text_1_en';
+        fuel_text_2 = 'fuel_text_2 fuel_text_2_en';
+        fuel_text_3 = 'fuel_text_3 fuel_text_3_en';
+        intoxic_text_1 = 'intoxic_text_1 intoxic_text_1_en';
+        intoxic_text_2 = 'intoxic_text_2 intoxic_text_2_en';
+        intoxic_text_3 = 'intoxic_text_3 intoxic_text_3_en';
+        world_text_1 = 'world_text_1 world_text_1_en';
+        world_text_2 = 'world_text_2 world_text_2_en'
+      }
         return (
           <div className="App" ref="app">
             <Head props={this.props} sub_cur={this.state.sub_cur} />
@@ -89,65 +111,69 @@ class Life extends Component {
               <ul>
                 <li className={`${content_index[0]?'content_cur':''}`}>
                   <div className="banner" />
-                  <div className="life_1" />
+                  <div className="life_1">
+                    <div className={life_text_1}><FormattedMessage id="life_text_1" values={{ br: <br /> }} /></div>
+                    <div className='life_text_2'><FormattedMessage id="life_text_2" values={{ br: <br /> }} /></div>
+                  </div>
                   <div className="life_2" />
-                  <div className="life_3" />
-                  <div className="life_4" />
+                  <div className="life_3">
+                    
+                  </div>
+                  <div className="life_4">
+                    <div className="life_text_3"><FormattedMessage id="life_text_3" values={{ br: <br /> }} /></div>
+                  </div>
                   <div className="life_5" />
                   <div className="life_6" />
                   <div className="life_7">
-                    <p><b>规格： 125ml/瓶    酒精度： 53%vol</b></p>
-                    <p><b>原料： 高粱  小麦  水</b></p>
-                    <p><b>份： 5年以上基酒与陈年老酒勾调而成</b></p>
-                    <p><span>酒体色泽清亮透明，酱香突出，适口感强，口味协调，微醺之下，绵长回甘。为年轻人所爱，恰到好处的量，尽兴的同时又能尽显个性。</span></p>
+                    <div className="life_text_4"><FormattedMessage id="life_text_4" values={{ br: <br /> }} /></div>
+                    <div className="life_text_5"><FormattedMessage id="life_text_5" values={{ br: <br /> }} /></div>
                   </div>
                 </li>
                 <li className={`${content_index[1]?'content_cur':''}`}>
                   <div className="banner_fuel" />
-                  <div className="fuel_1" />
+                  <div className="fuel_1">
+                    <div className={fuel_text_1}><FormattedMessage id="fuel_text_1" values={{ br: <br /> }} /></div>
+                    <div className={fuel_text_2}><FormattedMessage id="fuel_text_2" values={{ br: <br /> }} /></div>
+                    <div className={fuel_text_3}><FormattedMessage id="fuel_text_3" values={{ br: <br /> }} /></div>
+                  </div>
                   <div className="fuel_2">
-                    <p><b>规格： 700ml/瓶    酒精度： 53%vol</b></p>
-                    <p><b>原料： 高粱  小麦  水</b></p>
-                    <p><b>年份： 7年以上基酒与陈年老酒勾调而成</b></p>
-                    <p><span>酒体微黄透明，酱香丰满，入口柔和，<br />
-                      香味细腻，一饮而尽，空杯留香。<br />
-                      从设计到创意，步步为赢，<br />
-                      只为让你肆意燃烧，行素无忌。</span></p>
+                    <div className="fuel_text_4"><FormattedMessage id="fuel_text_4" values={{ br: <br /> }} /></div>
+                    <div className="fuel_text_5"><FormattedMessage id="fuel_text_5" values={{ br: <br /> }} /></div>
                   </div>
                 </li>
                 <li className={`${content_index[2]?'content_cur':''}`}>
                   <div className="banner_intoxic" />
                   <div className="intoxic_1" />
+                  <div className={intoxic_text_1}><FormattedMessage id="intoxic_text_1" values={{ br: <br /> }} /></div>
                   <div className="intoxic_2" />
-                  <div className="intoxic_3" />
-                  <div className="intoxic_4" />
+                  <div className={intoxic_text_2}><FormattedMessage id="intoxic_text_2" values={{ br: <br /> }} /></div>
+                  <div className="intoxic_3">
+                    <div className={intoxic_text_3}><FormattedMessage id="intoxic_text_3" values={{ br: <br /> }} /></div>
+                  </div>
+                  <div className="intoxic_4">
+                    <div className="intoxic_text_4"><FormattedMessage id="intoxic_text_4" values={{ br: <br /> }} /></div>
+                    <div className="intoxic_text_5"><FormattedMessage id="intoxic_text_5" values={{ br: <br /> }} /></div>
+                  </div>
                   <div className="intoxic_5" />
                   <div className="intoxic_6">
-                    <p><b>规格： 500ml/瓶    酒精度： 53%vol</b></p>
-                    <p><b>原料： 高粱  小麦  水</b></p>
-                    <p><b>年份： 8年以上基酒与陈年老酒勾调而成</b></p>
-                    <p><span>酒体色泽微黄透明，酱香浓郁，入口柔绵，<br />
-                      风格突出，推杯换盏，回味悠长。<br />
-                      叛逆又不失优雅精致，<br />
-                      绝对是助兴潮搭的不二之选。</span></p>
+                    <div className="intoxic_text_6"><FormattedMessage id="intoxic_text_6" values={{ br: <br /> }} /></div>
+                    <div className="intoxic_text_7"><FormattedMessage id="intoxic_text_7" values={{ br: <br /> }} /></div>
                   </div>
                 </li>
                 <li className={`${content_index[3]?'content_cur':''}`}>
                   <div className="banner_wrold" />
                   <div className="wrold_1" />
+                  <div className={world_text_1}><FormattedMessage id="world_text_1" values={{ br: <br /> }} /></div>
                   <div className="wrold_2" />
-                  <div className="wrold_3" />
+                  <div className="wrold_3">
+                    <div className={world_text_2}><FormattedMessage id="world_text_2" values={{ br: <br /> }} /></div>
+                  </div>
                   <div className="wrold_4" />
                   <div className="wrold_5" />
                   <div className="wrold_6" />
                   <div className="wrold_7">
-                    <p><b>规格： 500ml/瓶    酒精度： 53%vol</b></p>
-                    <p><b>原料： 高粱  小麦  水</b></p>
-                    <p><b>年份： 12年以上基酒与陈年老酒勾调而成</b></p>
-                    <p><span>酒体微黄清亮透明，酱香醇厚，<br />
-                      口感醇香，幽雅细腻，酒至酣处，<br />
-                      空杯留香持久。 <br />
-                      以纯粹致敬时光，创造属于你的人生主场。</span></p>
+                    <div className="world_text_3"><FormattedMessage id="world_text_3" values={{ br: <br /> }} /></div>
+                    <div className="world_text_4"><FormattedMessage id="world_text_4" values={{ br: <br /> }} /></div>
                   </div>
                 </li>
                 <li className={`${content_index[4]?'content_cur':''}`}>
@@ -166,13 +192,8 @@ class Life extends Component {
                   <div className="limit_12" />
                   <div className="limit_13" />
                   <div className="limit_14">
-                    <p><b>规格： 125ml/瓶    酒精度： 53%vol</b></p>
-                    <p><b>原料： 高粱  小麦  水</b></p>
-                    <p><b>年份： 5年以上基酒与陈年老酒勾调而成</b></p>
-                    <p><span>酒体微黄透明，酱香丰满，入口柔和，<br />
-                      香味细腻，一饮而尽，空杯留香。<br />
-                      从设计到创意，步步为赢， <br />
-                      只为让你肆意燃烧，行素无忌。</span></p>
+                    <div className="limit_text_1"><FormattedMessage id="limit_text_1" values={{ br: <br /> }} /></div>
+                    <div className="limit_text_2"><FormattedMessage id="limit_text_2" values={{ br: <br /> }} /></div>
                   </div>
                 </li>
                 <li className={`${content_index[5]?'content_cur':''}`} />

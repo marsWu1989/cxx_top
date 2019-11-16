@@ -46,10 +46,12 @@
 .brand_text {
   font-size: 29px;
   line-height: 1.5;
+  font-family: 'PingFang SC';
 }
 .brand_tabs {
   position: fixed;
   top: 130px;
+  font-family: 'PingFang SC';
 }
 .brand_tabs li {
   list-style: none;
