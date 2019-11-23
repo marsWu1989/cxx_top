@@ -74,7 +74,8 @@ class Life extends Component {
       intoxic_text_2 = 'intoxic_text_2',
       intoxic_text_3 = 'intoxic_text_3',
       world_text_1 = 'world_text_1',
-      world_text_2 = 'world_text_2';
+      world_text_2 = 'world_text_2',
+      c42c_text_2 = 'c42c_text_2';
       if (lang == 'en-US') {
         life_text_1 = 'life_text_1 life_text_1_en';
         fuel_text_1 = 'fuel_text_1 fuel_text_1_en';
@@ -84,7 +85,8 @@ class Life extends Component {
         intoxic_text_2 = 'intoxic_text_2 intoxic_text_2_en';
         intoxic_text_3 = 'intoxic_text_3 intoxic_text_3_en';
         world_text_1 = 'world_text_1 world_text_1_en';
-        world_text_2 = 'world_text_2 world_text_2_en'
+        world_text_2 = 'world_text_2 world_text_2_en';
+        c42c_text_2 = 'c42c_text_2 c42c_text_2_en'
       }
         return (
           <div className="App" ref="app">
@@ -196,7 +198,21 @@ class Life extends Component {
                     <div className="limit_text_2"><FormattedMessage id="limit_text_2" values={{ br: <br /> }} /></div>
                   </div>
                 </li>
-                <li className={`${content_index[5]?'content_cur':''}`} />
+                <li className={`${content_index[5]?'content_cur':''}`}>
+                  <div className="banner_42c" />
+                  <div className="c42c_1">
+                    <div className="c42c_text_1"><FormattedMessage id="c42c_text_1" values={{ br: <br /> }} /></div>
+                  </div>
+                  <div className="c42c_2">
+                    <div className={c42c_text_2}><FormattedMessage id="c42c_text_2" values={{ br: <br /> }} /></div>
+                  </div>
+                  <div className="c42c_3" />
+                  <div className="c42c_text_3"><FormattedMessage id="c42c_text_3" values={{ br: <br /> }} /></div>
+                  <div className="c42c_4" />
+                  <div className="c42c_5">
+                    <div className="c42c_text_4"><FormattedMessage id="c42c_text_4" values={{ br: <br /> }} /></div>
+                  </div>
+                </li>
               </ul>
             </div>
             <div className="sub_tabs">

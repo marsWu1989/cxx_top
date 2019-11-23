@@ -32,6 +32,15 @@ class Head extends Component {
             document.removeEventListener('touchmove', Head.preHandler, false);
         }
     }
+    onMouseMove(e) {
+      this.refs.mbg.style.display='block';
+      this.refs.mbg.style.left=`${e.clientX}px`;
+      this.refs.mbg.style.top=`${e.clientY}px`;
+    }
+    onMouseOut() {
+      console.log('2222')
+      this.refs.mbg.style.display='none';
+    }
     render() {
       const navState = [false, false, false, false, false, false];
       const sub_cur = this.props.sub_cur;
@@ -72,7 +81,7 @@ class Head extends Component {
       let Mname = 'menu';
       let Nname = 'nav';
       const path = this.props.props.match.path;
-      if (sub_cur == 3 || sub_cur == 4 || sub_cur == 5 || path == '/dress') {
+      if (sub_cur == 3 || sub_cur == 4 || sub_cur == 5 || sub_cur == 6 || path == '/dress') {
         logo = <i className="logo2" />;
         Mname = 'menu2'
       }
@@ -103,7 +112,7 @@ class Head extends Component {
                 <span className="thr" />
             </div>
             <div className={Nname}>
-              <div className="nav_box">
+              <div className="nav_box" onMouseMove={e => this.onMouseMove(e)} onMouseOut={() => this.onMouseOut()}>
                 {
                   list.map((item, index) => {
                     let name = 'item';
@@ -113,8 +122,8 @@ class Head extends Component {
                     return <div className={name} key={index}><Link to={item.route}><span>{item.en}</span><span className="cn">{item.cn}</span></Link></div>
                   })
                 }
-
               </div>
+              <div className="mbg" ref="mbg" />
             </div>
           </header>
         </div>
