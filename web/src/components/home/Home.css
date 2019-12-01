@@ -85,12 +85,14 @@
 }
 .spots {
   position: absolute;
+  overflow: hidden;
 }
 .spots ul {
   padding: 0;
   margin: 0;
 }
 .spot {
+  position: relative;
   display: inline-block;
   margin: 0 4px;
   width: 6px;
@@ -100,6 +102,7 @@
   cursor: pointer;
 }
 .cur {
+  position: relative;
   display: inline-block;
   margin: 0 4px;
   width: 6px;
@@ -115,7 +118,7 @@
   width: 0px;
   height: 1px;
   background: #D8D8D8;
-  transition: width 3s;
+  transition: width 2s;
 }
 .bg_1 {
   /*opacity: 0;*/
@@ -189,7 +192,7 @@
   left: 50%;
   top: 50%;
   margin: -210px 0 0 -450px;
-  /*background :transparent  url(./../../images/chest.png)  no-repeat center;*/
+  /*background :transparent  url(./../../images/42c.png)  no-repeat center;*/
   /*background: url(./../../images/life.png) no-repeat center bottom;*/
   background-size: cover;
   z-index: 1;
@@ -231,4 +234,24 @@
 }
 .langCur a {
   color: #fff;
+}
+.spot_1 {
+  top: 50px;
+  transition: top 1.2s;
+}
+.spot_2 {
+  top: 50px;
+  transition: top 1.4s;
+}
+.spot_3 {
+  top: 50px;
+  transition: top 1.6s;
+}
+.spot_4 {
+  top: 50px;
+  transition: top 1.8s;
+}
+.spot_5 {
+  top: 50px;
+  transition: top 2s;
 }

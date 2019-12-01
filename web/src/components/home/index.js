@@ -11,11 +11,11 @@ class Home extends Component {
             index: 1,
             cur: 1,
             spots: [
-              <li className="cur"  onClick={() => this.handleTab(1, true)} key="1" />,
-              <li className="spot" onClick={() => this.handleTab(2, true)} key="2" />,
-              <li className="spot" onClick={() => this.handleTab(3, true)} key="3" />,
-              <li className="spot" onClick={() => this.handleTab(4, true)} key="4" />,
-              <li className="spot" onClick={() => this.handleTab(5, true)} key="5" />
+              <li className="cur spot_1" onClick={() => this.handleTab(1, true)} key="1" />,
+              <li className="spot spot_2" onClick={() => this.handleTab(2, true)} key="2" />,
+              <li className="spot spot_3" onClick={() => this.handleTab(3, true)} key="3" />,
+              <li className="spot spot_4" onClick={() => this.handleTab(4, true)} key="4" />,
+              <li className="spot spot_5" onClick={() => this.handleTab(5, true)} key="5" />
             ]
         };
         this._mousewheel = this.mousewheel.bind(this);
@@ -28,6 +28,12 @@ class Home extends Component {
             this.refs.line.style.width = '777px';
             this.refs.bannerItem.children[0].style.opacity = 1;
             this.handleTab(1)
+            // console.log('spots', this.refs.spots_box.children[0].style.opacity)
+            this.refs.spots_box.children[0].style.top = 0;
+            this.refs.spots_box.children[1].style.top = 0;
+            this.refs.spots_box.children[2].style.top = 0;
+            this.refs.spots_box.children[3].style.top = 0;
+            this.refs.spots_box.children[4].style.top = 0;
         }, 0);
     }
     componentWillUnmount() {
@@ -67,14 +73,14 @@ class Home extends Component {
         // 更新按钮，i为按钮个数
         for (let i = 1; i <= 5; i++) {
             if (i === num) {
-                temp.push(<li className="cur"  onClick={() => this.handleTab(i, true)} key={i} />);
+                temp.push(<li className={`cur spot_${i}`} onClick={() => this.handleTab(i, true)} key={i} />);
                 this.refs.bannerItem.children[num - 1].style.opacity = 1;
                 this.refs.bannerItem.children[num - 1].style.display = 'block';
                 this.setState({
                     cur: i,
                 });
             } else {
-                temp.push(<li className="spot"  onClick={() => this.handleTab(i, true)} key={i} />);
+                temp.push(<li className={`spot spot_${i}`}  onClick={() => this.handleTab(i, true)} key={i} />);
                 console.log('this.refs.bannerItem', i)
                 this.refs.bannerItem.children[i - 1].style.opacity = 0;
                 this.refs.bannerItem.children[i - 1].style.display = 'none';
@@ -135,7 +141,7 @@ class Home extends Component {
                 <li className="img_2"><Link to="/brand"><span>Brand Story</span><span>品牌故事</span></Link></li>
                 <li className="img_3" onClick={() => this.handleClick(3)} />
                 <li className="img_4" onClick={() => this.handleClick(4)} />
-                <li className="img_1" onClick={() => this.handleClick(5)} />
+                <li className="img_5" onClick={() => this.handleClick(5)} />
               </ul>
             </div>
             <div className="text" ref="text">TOPPING巢品白酒</div>
@@ -144,7 +150,7 @@ class Home extends Component {
             </div>
             <div className="bottom">
               <div className="spots">
-                <ul>
+                <ul ref="spots_box">
                   {this.state.spots}
                 </ul>
               </div>
