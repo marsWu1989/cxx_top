@@ -26,11 +26,11 @@
   width: 900px;
   height: 420px;
   list-style-type: none;
-  /*display: inline-block;*/
+  visibility: hidden;
   cursor: pointer;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 1s;
+  transition: all 1s;
   z-index: 2;
 }
 .img_1 {
@@ -225,6 +225,7 @@
   opacity: 1;
 }
 .lang .en {
+  padding: 4px;
   display: inline-block;
   font-size: 20px;
 }

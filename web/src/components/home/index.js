@@ -14,8 +14,7 @@ class Home extends Component {
               <li className="cur spot_1" onClick={() => this.handleTab(1, true)} key="1" />,
               <li className="spot spot_2" onClick={() => this.handleTab(2, true)} key="2" />,
               <li className="spot spot_3" onClick={() => this.handleTab(3, true)} key="3" />,
-              <li className="spot spot_4" onClick={() => this.handleTab(4, true)} key="4" />,
-              <li className="spot spot_5" onClick={() => this.handleTab(5, true)} key="5" />
+              <li className="spot spot_4" onClick={() => this.handleTab(4, true)} key="4" />
             ]
         };
         this._mousewheel = this.mousewheel.bind(this);
@@ -33,7 +32,6 @@ class Home extends Component {
             this.refs.spots_box.children[1].style.top = 0;
             this.refs.spots_box.children[2].style.top = 0;
             this.refs.spots_box.children[3].style.top = 0;
-            this.refs.spots_box.children[4].style.top = 0;
         }, 0);
     }
     componentWillUnmount() {
@@ -45,12 +43,12 @@ class Home extends Component {
         let num = this.state.index;
         if (event.wheelDelta < 0) { //向上滚动
             if (num === 1) {
-                num = 6;
+                num = 5;
             }
             this.handleTab(num - 1, true, 'up');
         }
         if (event.wheelDelta > 0) { //向下滚动
-            if (num === 5) {
+            if (num === 4) {
                 num = 0;
             }
             this.handleTab(num + 1, true, 'down');
@@ -71,11 +69,11 @@ class Home extends Component {
         let num = n;
         const temp = [];
         // 更新按钮，i为按钮个数
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 1; i <= 4; i++) {
             if (i === num) {
                 temp.push(<li className={`cur spot_${i}`} onClick={() => this.handleTab(i, true)} key={i} />);
                 this.refs.bannerItem.children[num - 1].style.opacity = 1;
-                this.refs.bannerItem.children[num - 1].style.display = 'block';
+                this.refs.bannerItem.children[num - 1].style.visibility = 'visible';
                 this.setState({
                     cur: i,
                 });
@@ -83,14 +81,14 @@ class Home extends Component {
                 temp.push(<li className={`spot spot_${i}`}  onClick={() => this.handleTab(i, true)} key={i} />);
                 console.log('this.refs.bannerItem', i)
                 this.refs.bannerItem.children[i - 1].style.opacity = 0;
-                this.refs.bannerItem.children[i - 1].style.display = 'none';
+                this.refs.bannerItem.children[i - 1].style.visibility = 'hidden';
             }
         }
         // 5为图片个数，自动循环播放，1 2 3 4 5
         
         if (!wheel) {
             // return true;
-            if (num === 5) {
+            if (num === 4) {
                 num = 1;
             } else {
                 num++;   
@@ -127,6 +125,7 @@ class Home extends Component {
     }
     render() {
         let toLink = "/life";
+        const lang = cookie.load('lang');
         if (this.state.cur == 3) {
             toLink = "/dress";
         } else if (this.state.cur == 4) {
@@ -141,7 +140,6 @@ class Home extends Component {
                 <li className="img_2"><Link to="/brand"><span>Brand Story</span><span>品牌故事</span></Link></li>
                 <li className="img_3" onClick={() => this.handleClick(3)} />
                 <li className="img_4" onClick={() => this.handleClick(4)} />
-                <li className="img_5" onClick={() => this.handleClick(5)} />
               </ul>
             </div>
             <div className="text" ref="text">TOPPING巢品白酒</div>
@@ -155,8 +153,8 @@ class Home extends Component {
                 </ul>
               </div>
               <div className="lang">
-                <div className="cn langCur" onClick={() => this.handleLang('zh-CN')}><a href="/">中</a></div>
-                <div className="en" onClick={() => this.handleLang('en-US')}><a href="/">EN</a></div>
+                <div className={`cn ${lang == 'zh-CN'?'langCur':''}`} onClick={() => this.handleLang('zh-CN')}><a href="/">中</a></div>
+                <div className={`en ${lang == 'en-US'?'langCur':''}`} onClick={() => this.handleLang('en-US')}><a href="/">EN</a></div>
               </div>
               <div className="line" ref="line" />
             </div>

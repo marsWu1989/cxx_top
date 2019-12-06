@@ -13,6 +13,13 @@
   background: url(./../../images/chest_1.png) no-repeat center right;
   background-size: auto 100%;
 }
+.chest_1_en {
+  width: 1000px;
+  height: 2402px;
+  margin: 45px auto 0 auto;
+  background: url(./../../images/chest_1_en.png) no-repeat center right;
+  background-size: auto 100%;
+}
 .chest_2 {
   width: 1000px;
   height: 3238px;
@@ -20,10 +27,24 @@
   background: url(./../../images/chest_2.png) no-repeat center right;
   background-size: auto 100%;
 }
+.chest_2_en {
+  width: 1000px;
+  height: 3016px;
+  margin: 30px auto 0 auto;
+  background: url(./../../images/chest_2_en.png) no-repeat center right;
+  background-size: auto 100%;
+}
 .chest_3 {
   width: 1000px;
   height: 1670px;
   margin: 30px auto 0 auto;
   background: url(./../../images/chest_3.png) no-repeat center right;
+  background-size: auto 100%;
+}
+.chest_3_en {
+  width: 1000px;
+  height: 1359px;
+  margin: 30px auto 0 auto;
+  background: url(./../../images/chest_3_en.png) no-repeat center right;
   background-size: auto 100%;
 }
