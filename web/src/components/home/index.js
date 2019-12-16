@@ -125,7 +125,7 @@ class Home extends Component {
     }
     render() {
         let toLink = "/life";
-        const lang = cookie.load('lang');
+        const lang = cookie.load('lang') || 'zh-CN';
         if (this.state.cur == 3) {
             toLink = "/dress";
         } else if (this.state.cur == 4) {
