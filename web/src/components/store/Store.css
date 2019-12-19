@@ -49,19 +49,19 @@
 .tm {
   width: 97px;
   height: 100px;
-  background: url(./../../images/tm.png) no-repeat center left;
+  background: url(./../../images/tm.jpg) no-repeat center left;
   background-size: 100%;
 }
 .jd {
   width: 100px;
   height: 100px;
-  background: url(./../../images/jd.png) no-repeat center left;
+  background: url(./../../images/jd.jpg) no-repeat center left;
   background-size: 100%;
 }
 .ch {
   width: 100px;
   height: 100px;
-  background: url(./../../images/ch.png) no-repeat center left;
+  background: url(./../../images/ch.jpg) no-repeat center left;
   background-size: 100%;
 }
 

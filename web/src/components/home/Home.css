@@ -34,7 +34,7 @@
   z-index: 2;
 }
 .img_1 {
-  background: url(./../../images/life.png) no-repeat center;
+  background: url(./../../images/life.jpg) no-repeat center;
   /*-webkit-background-size: 100%;*/
   background-size: cover;
 }
@@ -56,12 +56,12 @@
   opacity: .2;
 }
 .img_3 {
-  background: url(./../../images/dress.png) no-repeat center;
+  background: url(./../../images/dress.jpg) no-repeat center;
   -webkit-background-size: 100%;
   background-size: 100%;
 }
 .img_4 {
-  background: url(./../../images/chest.png) no-repeat center;
+  background: url(./../../images/chest.jpg) no-repeat center;
   -webkit-background-size: 100%;
   background-size: 100%;
 }
@@ -128,8 +128,8 @@
   left: 50%;
   top: 50%;
   margin: -210px 0 0 -450px;
-  background :transparent  url(./../../images/life.png)  no-repeat center;
-  /*background: url(./../../images/life.png) no-repeat center bottom;*/
+  background :transparent  url(./../../images/life.jpg)  no-repeat center;
+  /*background: url(./../../images/life.jpg) no-repeat center bottom;*/
   background-size: cover;
   z-index: 1;
   /*transition: background-size 2s;*/
@@ -144,8 +144,8 @@
   left: 50%;
   top: 50%;
   margin: -210px 0 0 -450px;
-  /*background :transparent  url(./../../images/dress.png)  no-repeat center;*/
-  /*background: url(./../../images/life.png) no-repeat center bottom;*/
+  /*background :transparent  url(./../../images/dress.jpg)  no-repeat center;*/
+  /*background: url(./../../images/life.jpg) no-repeat center bottom;*/
   background-size: cover;
   z-index: 1;
   /*transition: background-size 2s;*/
@@ -160,8 +160,8 @@
   left: 50%;
   top: 50%;
   margin: -210px 0 0 -450px;
-  background :transparent  url(./../../images/dress.png)  no-repeat center;
-  /*background: url(./../../images/life.png) no-repeat center bottom;*/
+  background :transparent  url(./../../images/dress.jpg)  no-repeat center;
+  /*background: url(./../../images/life.jpg) no-repeat center bottom;*/
   background-size: cover;
   z-index: 1;
   /*transition: background-size 2s;*/
@@ -176,8 +176,8 @@
   left: 50%;
   top: 50%;
   margin: -210px 0 0 -450px;
-  background :transparent  url(./../../images/chest.png)  no-repeat center;
-  /*background: url(./../../images/life.png) no-repeat center bottom;*/
+  background :transparent  url(./../../images/chest.jpg)  no-repeat center;
+  /*background: url(./../../images/life.jpg) no-repeat center bottom;*/
   background-size: cover;
   z-index: 1;
   /*transition: background-size 2s;*/
@@ -192,8 +192,8 @@
   left: 50%;
   top: 50%;
   margin: -210px 0 0 -450px;
-  /*background :transparent  url(./../../images/42c.png)  no-repeat center;*/
-  /*background: url(./../../images/life.png) no-repeat center bottom;*/
+  /*background :transparent  url(./../../images/42c.jpg)  no-repeat center;*/
+  /*background: url(./../../images/life.jpg) no-repeat center bottom;*/
   background-size: cover;
   z-index: 1;
   /*transition: background-size 2s;*/
