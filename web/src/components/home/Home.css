@@ -36,7 +36,7 @@
 .img_1 {
   background: url(./../../images/life.jpg) no-repeat center;
   /*-webkit-background-size: 100%;*/
-  background-size: cover;
+  /*background-size: 1920px 950px;*/
 }
 .img_2 {
   background: #fff;
@@ -95,8 +95,8 @@
   position: relative;
   display: inline-block;
   margin: 0 4px;
-  width: 6px;
-  height: 6px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background: #585858;
   cursor: pointer;
@@ -105,8 +105,8 @@
   position: relative;
   display: inline-block;
   margin: 0 4px;
-  width: 6px;
-  height: 6px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background: #FF0000;
   cursor: pointer;
@@ -130,7 +130,7 @@
   margin: -210px 0 0 -450px;
   background :transparent  url(./../../images/life.jpg)  no-repeat center;
   /*background: url(./../../images/life.jpg) no-repeat center bottom;*/
-  background-size: cover;
+  /*background-size: 1920px 950px;*/
   z-index: 1;
   /*transition: background-size 2s;*/
   transition: all 1s;
@@ -144,9 +144,9 @@
   left: 50%;
   top: 50%;
   margin: -210px 0 0 -450px;
-  /*background :transparent  url(./../../images/dress.jpg)  no-repeat center;*/
+  background :transparent  url(./../../images/none.jpg)  no-repeat center;
   /*background: url(./../../images/life.jpg) no-repeat center bottom;*/
-  background-size: cover;
+  /*background-size: cover;*/
   z-index: 1;
   /*transition: background-size 2s;*/
   transition: all 1s;
@@ -162,7 +162,7 @@
   margin: -210px 0 0 -450px;
   background :transparent  url(./../../images/dress.jpg)  no-repeat center;
   /*background: url(./../../images/life.jpg) no-repeat center bottom;*/
-  background-size: cover;
+  /*background-size: cover;*/
   z-index: 1;
   /*transition: background-size 2s;*/
   transition: all 1s;
@@ -178,7 +178,7 @@
   margin: -210px 0 0 -450px;
   background :transparent  url(./../../images/chest.jpg)  no-repeat center;
   /*background: url(./../../images/life.jpg) no-repeat center bottom;*/
-  background-size: cover;
+  /*background-size: cover;*/
   z-index: 1;
   /*transition: background-size 2s;*/
   transition: all 1s;

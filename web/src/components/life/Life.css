@@ -667,9 +667,9 @@
 .bannerText {
   width: 100%;
   position: absolute;
-  left: 100%;
+  left: 27%;
   bottom: 50px;
-  transition: left 1s;
+  transition: opacity 1s;
   z-index: 2;
 }
 .lifeText1 {

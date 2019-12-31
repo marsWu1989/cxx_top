@@ -20,6 +20,8 @@ class Home extends Component {
         this._mousewheel = this.mousewheel.bind(this);
     }
     componentDidMount() {
+        const clientHeight = document.documentElement.clientHeight;
+        const clientWidth = document.documentElement.clientWidth;
         window.addEventListener('mousewheel', this._mousewheel);
         this.setIntervalTab();
         // this.refs.line.style.width = '777px';
@@ -32,7 +34,11 @@ class Home extends Component {
             this.refs.spots_box.children[1].style.top = 0;
             this.refs.spots_box.children[2].style.top = 0;
             this.refs.spots_box.children[3].style.top = 0;
-        }, 0);
+        }, 1);
+        this.setState({
+            clientHeight: clientHeight,
+            clientWidth: clientWidth
+        })
     }
     componentWillUnmount() {
         window.removeEventListener('mousewheel', this._mousewheel);
@@ -106,8 +112,8 @@ class Home extends Component {
     }
     handleClick(index) {
         console.log('index', index)
-      const clientHeight = document.documentElement.clientHeight;
-      const clientWidth = document.documentElement.clientWidth;
+        const clientHeight = document.documentElement.clientHeight;
+        const clientWidth = document.documentElement.clientWidth;
         this.refs.bannerItem.style.opacity = 0;
       setTimeout(() => {
         // this.refs[`bg_${index}`].style.diplay = 'block';
@@ -136,14 +142,14 @@ class Home extends Component {
             <Head props={this.props} cur={this.state.cur} />
             <div className="main">
               <ul ref="bannerItem">
-                <li className="img_1" onClick={() => this.handleClick(1)} />
+                <li className="img_1" onClick={() => this.handleClick(1)} style={{backgroundSize: `auto ${this.state.clientHeight}px`}} />
                 <li className="img_2"><Link to="/brand"><span>Brand Story</span><span>品牌故事</span></Link></li>
-                <li className="img_3" onClick={() => this.handleClick(3)} />
-                <li className="img_4" onClick={() => this.handleClick(4)} />
+                <li className="img_3" onClick={() => this.handleClick(3)} style={{backgroundSize: `auto ${this.state.clientHeight}px`}} />
+                <li className="img_4" onClick={() => this.handleClick(4)} style={{backgroundSize: `auto ${this.state.clientHeight}px`}} />
               </ul>
             </div>
             <div className="text" ref="text">TOPPING巢品白酒</div>
-            <div className={`bg bg_${this.state.cur}`} ref={`bg_${this.state.cur}`}>
+            <div className={`bg bg_${this.state.cur}`} ref={`bg_${this.state.cur}`} style={{backgroundSize: `auto ${this.state.clientHeight}px`}}>
               <Link to={toLink} />
             </div>
             <div className="bottom">

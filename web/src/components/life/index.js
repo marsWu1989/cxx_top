@@ -55,10 +55,10 @@ class Life extends Component {
       for (let i = 1; i <= 5; i++) {
           if (i === n) {
             console.log(n)
-            this.refs[`bannerText${i}`].style.left = '27%';
+            // this.refs[`bannerText${i}`].style.left = '27%';
             this.refs[`bannerText${i}`].style.opacity = 1;
           } else {
-            this.refs[`bannerText${i}`].style.left = '100%';
+            // this.refs[`bannerText${i}`].style.left = '100%';
             this.refs[`bannerText${i}`].style.opacity = 0;
           }
       }

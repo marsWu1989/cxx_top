@@ -92,7 +92,7 @@ class Head extends Component {
       let text = "";
         if (path == '/') {
           navState[0] = true;
-          text = <span ref="text">IT’S TOPPING 喜欢而已</span>;
+          text = <span ref="text" className="slogan" />;
         } else {
           text = "";
         }
@@ -112,7 +112,7 @@ class Head extends Component {
                 <span className="thr" />
             </div>
             <div className={Nname}>
-              <div className="nav_box" onMouseMove={e => this.onMouseMove(e)} onMouseOut={() => this.onMouseOut()}>
+              <div className="nav_box">
                 {
                   list.map((item, index) => {
                     let name = 'item';

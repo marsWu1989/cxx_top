@@ -10,9 +10,16 @@
 .App-header > span {
   position: relative;
   color: #000;
-  opacity: .2;
   font-size: 20px;
   z-index: 9;
+}
+.slogan {
+  width: 215px;
+  height: 19px;
+  display: inline-block;
+  background: url(./../../images/slogan.png) no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
 }
 .logo {
   position: relative;
@@ -41,8 +48,8 @@
   display: block;
   float: right;
   margin-top: 7.5px;
-  width: 45px;
-  height: 30px;
+  width: 40px;
+  height: 25px;
   cursor: pointer;
   z-index: 9;
 }
@@ -51,8 +58,8 @@
   display: block;
   float: right;
   margin-top: 7.5px;
-  width: 45px;
-  height: 30px;
+  width: 40px;
+  height: 25px;
   cursor: pointer;
   z-index: 9;
 }
@@ -128,7 +135,7 @@
   z-index: 2;
 }
 .nav_box .item:hover a {
-  color: #fff;
+  /*color: #fff;*/
   opacity: 1;
 }
 /*.item_active:before {
@@ -174,12 +181,14 @@
   display: block;
 }
 .nav_box {
+  position: relative;
+  top: 50%;
   width: 650px;
   padding: 0;
-  margin: 120px auto 0 auto;
+  margin: -255px auto 0 auto;
 }
 .nav_box:hover a {
-  opacity: .1;
+  /*opacity: .1;*/
 }
 .nav {
   line-height: 1;

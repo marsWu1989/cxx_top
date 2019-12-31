@@ -9,7 +9,7 @@
 }
 .store_desc {
   font-size: 70px;
-  opacity: .5;
+  opacity: .2;
   margin-top: 20px;
 }
 .buyList ul {
@@ -33,7 +33,7 @@
 .buyList span {
   display: block;
   font-size: 40px;
-  opacity: .8;
+  opacity: .4;
   margin-bottom: 10px;
 }
 .buyList a {
