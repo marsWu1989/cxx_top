@@ -38,7 +38,7 @@ class Head extends Component {
       this.refs.mbg.style.top=`${e.clientY}px`;
     }
     onMouseOut() {
-      console.log('2222')
+      // console.log('2222')
       this.refs.mbg.style.display='none';
     }
     render() {
