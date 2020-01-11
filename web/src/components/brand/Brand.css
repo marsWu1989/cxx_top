@@ -2,6 +2,8 @@
   text-align: center;
 
 }
+.App {
+}
 .tab_cur {
   color: #000;
 }
@@ -50,8 +52,14 @@
 }
 .brand_tabs {
   position: fixed;
+  width: 1260px;
   top: 130px;
+  left: 50%;
+  margin: 0px 0 0 -640px;
   font-family: 'PingFang SC';
+}
+.brand_tabs ul {
+  float: left;
 }
 .brand_tabs li {
   list-style: none;

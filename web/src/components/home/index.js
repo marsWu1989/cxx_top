@@ -148,7 +148,9 @@ class Home extends Component {
                 <li className="img_4" onClick={() => this.handleClick(4)} style={{backgroundSize: `auto ${this.state.clientHeight}px`}} />
               </ul>
             </div>
-            <div className="text" ref="text">TOPPING巢品白酒</div>
+            {
+                this.state.cur !== 2?<div className="text" ref="text" />:null
+            }
             <div className={`bg bg_${this.state.cur}`} ref={`bg_${this.state.cur}`} style={{backgroundSize: `auto ${this.state.clientHeight}px`}}>
               <Link to={toLink} />
             </div>

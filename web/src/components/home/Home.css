@@ -76,10 +76,13 @@
 .text {
   position: absolute;
   width: 900px;
+  height: 19px;
   left: 50%;
   top: 50%;
   margin: 220px 0 0 -450px;
-  font-size: 24px;
+  background: url(./../../images/home_text.png) no-repeat center left;
+  -webkit-background-size: 169px 19px;
+  background-size: 169px 19px;
   /*opacity: 0;*/
   /*transition: opacity 1s;*/
 }

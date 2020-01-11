@@ -15,23 +15,23 @@ class Head extends Component {
     handleClick() {
       this.setState({
         active: !this.state.active
-      }, () => this.setOverflow())
+      })
     }
-    setOverflow() {
-        const that = this;
-        const clientHeight = document.documentElement.clientHeight;
-        if (that.state.active) {
-            document.getElementsByTagName('html')[0].style.overflow = 'hidden';
-            document.getElementsByTagName('html')[0].style.height = '100%';
-            document.getElementsByTagName('html')[0].style.width = '100%';
-            document.addEventListener('touchmove', Head.preHandler, false);
-        } else {
-            document.getElementsByTagName('html')[0].style.overflow = 'auto';
-            // document.getElementsByTagName('html')[0].style.position = 'initial';
-            // document.getElementsByTagName('html')[0].style.height = 'auto';
-            document.removeEventListener('touchmove', Head.preHandler, false);
-        }
-    }
+    // setOverflow() {
+    //     const that = this;
+    //     const clientHeight = document.documentElement.clientHeight;
+    //     if (that.state.active) {
+    //         document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+    //         document.getElementsByTagName('html')[0].style.height = '100%';
+    //         document.getElementsByTagName('html')[0].style.width = '100%';
+    //         document.addEventListener('touchmove', Head.preHandler, false);
+    //     } else {
+    //         document.getElementsByTagName('html')[0].style.overflow = 'auto';
+    //         document.getElementsByTagName('html')[0].style.position = 'initial';
+    //         document.getElementsByTagName('html')[0].style.height = 'auto';
+    //         document.removeEventListener('touchmove', Head.preHandler, false);
+    //     }
+    // }
     onMouseMove(e) {
       this.refs.mbg.style.display='block';
       this.refs.mbg.style.left=`${e.clientX}px`;
@@ -50,12 +50,12 @@ class Head extends Component {
         {
           en: 'BRAND STORY',
           cn: '品牌故事',
-          route: '/life'
+          route: '/brand'
         },
         {
           en: 'TOPPING LIQUOR',
           cn: '巢品白酒',
-          route: '/liquor'
+          route: '/life'
         },
         {
           en: 'CLOTHING',
@@ -67,11 +67,11 @@ class Head extends Component {
           cn: '箱包',
           route: '/chest'
         },
-        {
-          en: 'CUSTOMMADE',
-          cn: '订制',
-          route: '/custommade'
-        },
+        // {
+        //   en: 'CUSTOMMADE',
+        //   cn: '订制',
+        //   route: '/custommade'
+        // },
         {
           en: 'HOT TO BUY',
           cn: '如何购买',
@@ -111,7 +111,7 @@ class Head extends Component {
                 <span className="two" />
                 <span className="thr" />
             </div>
-            <div className={Nname}>
+            <div className={Nname} onClick={() => this.handleClick()}>
               <div className="nav_box">
                 {
                   list.map((item, index) => {
