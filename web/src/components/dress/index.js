@@ -11,6 +11,12 @@ class Dress extends Component {
         };
     }
     componentDidMount() {
+        const clientHeight = document.documentElement.clientHeight;
+        const clientWidth = document.documentElement.clientWidth;
+        this.setState({
+            clientHeight: clientHeight,
+            clientWidth: clientWidth
+        })
     }
     // 绑定切换
     
@@ -25,7 +31,7 @@ class Dress extends Component {
         return (
           <div className="App" ref="app">
             <Head props={this.props} />
-            <div className="dressBanner" />
+            <div className="dressBanner" style={{backgroundSize: `auto ${this.state.clientHeight}px`}} />
             <div className="dress_1" />
             <div className="dress_2">
                 <div className={dress_text_1}><FormattedMessage id="dress_text_1" values={{ br: <br /> }} /></div>

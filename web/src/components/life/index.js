@@ -21,6 +21,12 @@ class Life extends Component {
     }
     componentDidMount() {
       // this.refs[`bannerText1`].style.left = '220px';
+      const clientHeight = document.documentElement.clientHeight;
+      const clientWidth = document.documentElement.clientWidth;
+      this.setState({
+          clientHeight: clientHeight,
+          clientWidth: clientWidth
+      })
       setTimeout(() => {
           this.textAnimation(1)
       }, 0);
@@ -112,7 +118,7 @@ class Life extends Component {
               </div>
               <ul>
                 <li className={`${content_index[0]?'content_cur':''}`}>
-                  <div className="banner" />
+                  <div className="banner" style={{backgroundSize: `auto ${this.state.clientHeight}px`}} />
                   <div className="life_1">
                     <div className={life_text_1}><FormattedMessage id="life_text_1" values={{ br: <br /> }} /></div>
                     <div className='life_text_2'><FormattedMessage id="life_text_2" values={{ br: <br /> }} /></div>
