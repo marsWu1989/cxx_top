@@ -88,6 +88,7 @@ class Head extends Component {
       if (this.state.active) {
         Mname = `menu active`;
         Nname = 'nav nav_active';
+        logo = <i className="logo" />;
         for (let i = 0; i <= 4; i++) {
           setTimeout(() => {
             this.refs[`nav_text_${i}`].style.bottom = 0;
