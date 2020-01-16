@@ -10,7 +10,7 @@
 .brand_content {
   width: 610px;
   margin: 0 auto 0 auto;
-  padding: 130px 0 0 0;
+  padding: 180px 0 50px 0;
   line-height: 1;
 }
 .brand_content li {
@@ -34,7 +34,7 @@
   background: url(./../../images/brand1.jpg) no-repeat center;
   -webkit-background-size: 100%;
   background-size: 100%;
-  margin: 20px 0 20px 0;
+  margin: 50px 0 50px 0;
 }
 .brand_img2 {
   display: block;
@@ -43,7 +43,7 @@
   background: url(./../../images/brand2.jpg) no-repeat center;
   -webkit-background-size: 100%;
   background-size: 100%;
-  margin: 20px 0 20px 0;
+  margin: 50px 0 50px 0;
 }
 .brand_text {
   font-size: 29px;
@@ -53,7 +53,7 @@
 .brand_tabs {
   position: fixed;
   width: 1260px;
-  top: 130px;
+  top: 190px;
   left: 50%;
   margin: 0px 0 0 -640px;
   font-family: 'PingFang SC';
@@ -69,7 +69,7 @@
   position: relative;
   font-size: 20px;
   margin: 0;
-  padding: 10px 0;
+  padding: 15px 0;
   cursor: pointer;
 }
 .brand_tab:hover {
@@ -83,7 +83,7 @@
   height: 2px;
   background: #000;
   right: -25px;
-  top: 23px;
+  top: 28px;
 }
 .brand_tab_cur {
   color: rgba(0, 0, 0, .5);
@@ -96,5 +96,5 @@
   height: 2px;
   background: #000;
   right: -25px;
-  top: 23px;
+  top: 28px;
 }

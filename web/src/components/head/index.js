@@ -102,8 +102,23 @@ class Head extends Component {
       }
       let text = "";
         if (path == '/') {
-          navState[0] = true;
+          // navState[1] = true;
           text = <span ref="text" className="slogan" />;
+        } else if (path == '/life') {
+          navState[1] = true;
+          text = "";
+        } else if (path == '/brand') {
+          navState[0] = true;
+          text = "";
+        } else if (path == '/dress') {
+          navState[2] = true;
+          text = "";
+        } else if (path == '/chest') {
+          navState[3] = true;
+          text = "";
+        } else if (path == '/store') {
+          navState[4] = true;
+          text = "";
         } else {
           text = "";
         }

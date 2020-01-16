@@ -60,7 +60,7 @@ class Life extends Component {
             tabs: temp,
             content_index: content_index
         });
-        Life.toTop();
+        Life.toTop()
     }
     textAnimation(n) {
       for (let i = 1; i <= 5; i++) {
@@ -103,27 +103,14 @@ class Life extends Component {
           <div className="App" ref="app">
             <Head props={this.props} sub_cur={this.state.sub_cur} />
             <div className="life">
-              <div className='bannerText' ref="bannerText1">
-                <i className="lifeText1" />
-                <i className="lifeText2" />
-              </div>
-              <div className='bannerText' ref="bannerText2">
-                <i className="fuleText1" />
-                <i className="fuleText2" />
-              </div>
-              <div className='bannerText' ref="bannerText3">
-                <i className="intoxicText1" />
-                <i className="intoxicText2" />
-              </div>
-              <div className='bannerText' ref="bannerText4">
-                <i className="wroldText" />
-              </div>
-              <div className='bannerText' ref="bannerText5">
-                <i className="limitText" />
-              </div>
               <ul>
                 <li className={`${content_index[0]?'content_cur content_life':'content_life'}`}>
-                  <div className="banner" />
+                  <div className="banner">
+                    <div className='bannerText' ref="bannerText1">
+                      <i className="lifeText1" />
+                      <i className="lifeText2" />
+                    </div>
+                  </div>
                   <div className="life_img">
                     <div className="life_1">
                       <div className={life_text_1}><FormattedMessage id="life_text_1" values={{ br: <br /> }} /></div>
@@ -146,6 +133,10 @@ class Life extends Component {
                 </li>
                 <li className={`${content_index[1]?'content_cur content_fuel':'content_fuel'}`}>
                   <div className="banner_fuel" />
+                  <div className='bannerText' ref="bannerText2">
+                    <i className="fuleText1" />
+                    <i className="fuleText2" />
+                  </div>
                   <div className="fuel_1">
                     <div className={fuel_text_1}><FormattedMessage id="fuel_text_1" values={{ br: <br /> }} /></div>
                     <div className={fuel_text_2}><FormattedMessage id="fuel_text_2" values={{ br: <br /> }} /></div>
@@ -157,7 +148,12 @@ class Life extends Component {
                   </div>
                 </li>
                 <li className={`${content_index[2]?'content_cur content_intoxic':'content_intoxic'}`}>
-                  <div className="banner_intoxic" />
+                  <div className="banner_intoxic">
+                    <div className='bannerText' ref="bannerText3">
+                      <i className="intoxicText1" />
+                      <i className="intoxicText2" />
+                    </div>
+                  </div>
                   <div className="intoxic_img">
                     <div className="intoxic_1" />
                     <div className={intoxic_text_1}><FormattedMessage id="intoxic_text_1" values={{ br: <br /> }} /></div>
@@ -178,7 +174,11 @@ class Life extends Component {
                   </div>
                 </li>
                 <li className={`${content_index[3]?'content_cur content_wrold':'content_wrold'}`}>
-                  <div className="banner_wrold" />
+                  <div className="banner_wrold">
+                    <div className='bannerText' ref="bannerText4">
+                      <i className="wroldText" />
+                    </div>
+                  </div>
                   <div className="wrold_img">
                     <div className="wrold_1" />
                     <div className={world_text_1}><FormattedMessage id="world_text_1" values={{ br: <br /> }} /></div>
@@ -196,7 +196,11 @@ class Life extends Component {
                   </div>
                 </li>
                 <li className={`${content_index[4]?'content_cur content_limit':'content_limit'}`}>
-                  <div className="banner_limit" />
+                  <div className="banner_limit">
+                    <div className='bannerText' ref="bannerText5">
+                      <i className="limitText" />
+                    </div>
+                  </div>
                   <div className="limit_img">
                     <div className="limit_1" />
                     <div className="limit_2" />
