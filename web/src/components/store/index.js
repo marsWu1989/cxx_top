@@ -40,6 +40,10 @@ class Store extends Component {
                             </p>
                         </li>
                     </ul>
+                    <div className="contact">
+                        <span>Tel: 4006-699-698</span>
+                        <span>Email: itstopping.com</span>
+                    </div>
                 </div>
             </div>
           </div>

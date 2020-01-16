@@ -26,7 +26,7 @@ class Home extends Component {
         this.setIntervalTab();
         // this.refs.line.style.width = '777px';
         setTimeout(() => {
-            this.refs.line.style.width = '777px';
+            this.refs.line.style.width = '707px';
             this.refs.bannerItem.children[0].style.opacity = 1;
             this.handleTab(1)
             // console.log('spots', this.refs.spots_box.children[0].style.opacity)
@@ -111,49 +111,51 @@ class Home extends Component {
         }
     }
     handleClick(index) {
+        let toLink = "/life";
+        if (this.state.cur == 3) {
+            toLink = "/dress";
+        } else if (this.state.cur == 4) {
+            toLink = "/chest";
+        }
         console.log('index', index)
         const clientHeight = document.documentElement.clientHeight;
         const clientWidth = document.documentElement.clientWidth;
         this.refs.bannerItem.style.opacity = 0;
-      setTimeout(() => {
-        // this.refs[`bg_${index}`].style.diplay = 'block';
-        this.refs[`bg_${index}`].style.zIndex = 3;
-        this.refs[`bg_${index}`].style.width = `${clientWidth}px`;
-        this.refs[`bg_${index}`].style.height = `${clientHeight}px`;
-        this.refs[`bg_${index}`].style.margin = 0;
-        this.refs[`bg_${index}`].style.top = 0;
-        this.refs[`bg_${index}`].style.left = 0;
-      }, 0);
+        setTimeout(() => {
+            // this.refs[`bg_${index}`].style.diplay = 'block';
+            this.refs[`bg_${index}`].style.zIndex = 3;
+            this.refs[`bg_${index}`].style.width = `${clientWidth}px`;
+            this.refs[`bg_${index}`].style.height = `${clientHeight}px`;
+            this.refs[`bg_${index}`].style.margin = 0;
+            this.refs[`bg_${index}`].style.top = 0;
+            this.refs[`bg_${index}`].style.left = 0;
+        }, 0);
+        setTimeout(() => {
+            this.props.history.push(toLink);
+        }, 2000)
       clearInterval(this.state.tab);
     }
     handleLang(lang) {
         cookie.save('lang', lang)
     }
     render() {
-        let toLink = "/life";
         const lang = cookie.load('lang') || 'zh-CN';
-        if (this.state.cur == 3) {
-            toLink = "/dress";
-        } else if (this.state.cur == 4) {
-            toLink = "/chest";
-        }
+        
         return (
           <div className="App">
             <Head props={this.props} cur={this.state.cur} />
             <div className="main">
               <ul ref="bannerItem">
-                <li className="img_1" onClick={() => this.handleClick(1)} style={{backgroundSize: `auto ${this.state.clientHeight}px`}} />
+                <li className="img_1" onClick={() => this.handleClick(1)}  />
                 <li className="img_2"><Link to="/brand"><span>Brand Story</span><span>品牌故事</span></Link></li>
-                <li className="img_3" onClick={() => this.handleClick(3)} style={{backgroundSize: `auto ${this.state.clientHeight}px`}} />
-                <li className="img_4" onClick={() => this.handleClick(4)} style={{backgroundSize: `auto ${this.state.clientHeight}px`}} />
+                <li className="img_3" onClick={() => this.handleClick(3)} />
+                <li className="img_4" onClick={() => this.handleClick(4)} />
               </ul>
             </div>
             {
                 this.state.cur !== 2?<div className="text" ref="text" />:null
             }
-            <div className={`bg bg_${this.state.cur}`} ref={`bg_${this.state.cur}`} style={{backgroundSize: `auto ${this.state.clientHeight}px`}}>
-              <Link to={toLink} />
-            </div>
+            <div className={`bg bg_${this.state.cur}`} ref={`bg_${this.state.cur}`} />
             <div className="bottom">
               <div className="spots">
                 <ul ref="spots_box">

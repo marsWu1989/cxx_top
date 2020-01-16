@@ -87,7 +87,18 @@ class Head extends Component {
       }
       if (this.state.active) {
         Mname = `menu active`;
-        Nname = 'nav nav_active'
+        Nname = 'nav nav_active';
+        for (let i = 0; i <= 4; i++) {
+          setTimeout(() => {
+            this.refs[`nav_text_${i}`].style.bottom = 0;
+          }, 0)
+        }
+      } else {
+        for (let i = 0; i <= 4; i++) {
+          setTimeout(() => {
+            this.refs[`nav_text_${i}`].style.bottom = '-55px';
+          }, 0)
+        }
       }
       let text = "";
         if (path == '/') {
@@ -119,7 +130,7 @@ class Head extends Component {
                     if (navState[index]) {
                       name = 'item item_active'
                     }
-                    return <div className={name} key={index}><Link to={item.route}><span>{item.en}</span><span className="cn">{item.cn}</span></Link></div>
+                    return <div className={name} key={index}><Link to={item.route} ref={`nav_text_${index}`}><span>{item.en}</span><span className="cn">{item.cn}</span></Link></div>
                   })
                 }
               </div>

@@ -1,6 +1,7 @@
  @font-face {
      font-family: 'commonFont';
      src: url('./BEBAS.ttf');
+
  }
  html {
     width: 100%;
@@ -13,11 +14,13 @@ body {
   font-family: 'commonFont';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*background: rgba(0, 0, 0, 1);*/
+  /*background: rgba(0, 0, 0, 0);*/
 }
 #root {
    position: relative;
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 .App {
     position: relative;

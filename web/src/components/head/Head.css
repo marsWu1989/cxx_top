@@ -127,9 +127,11 @@
 .item {
   position: relative;
   /*background: #fff;*/
+  height: 55px;
   padding: 15px 0;
   margin-left: 60px;
   z-index: 2;
+  overflow: hidden;
 }
 .item:hover {
   z-index: 2;
@@ -161,6 +163,9 @@
   background: #000;
 }*/
 .item a{
+  position: absolute;
+  bottom: -55px;
+  transition: bottom 0.5s ease;
   color: #000;
   text-decoration: none;
 }
